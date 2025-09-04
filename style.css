@@ -1,0 +1,254 @@
+/* --- Styles de base --- */
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #05074f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid white;
+}
+.sidebar h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 0 5px #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    background-color: #2ff22c;
+    padding: 0.4rem;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #2ff22c;
+}
+
+.content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 2rem 3rem;
+}
+
+section {
+    padding: 50px 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.content h1 {
+    color: #2ff22c;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.content h2 {
+    color: #2ff22c;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.presentation img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #aaa;
+}
+
+.presentation p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    Color: #2c2f5c;
+}
+
+.cv-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #2ff22c;
+    color: #2ff22c;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cv-button:hover {
+    background-color: #2ff22c;
+    color: white;
+}
+
+a {
+    color: inherit;
+}
+
+.contact-section {
+    background-color: #fff;
+    padding: 3rem;
+    margin-top: 3rem;
+    border-top: 3px solid #2ff22c;
+    border-radius: 8px;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    color: #2ff22c;
+    margin-bottom: 1rem;
+}
+
+.contact-section h4 {
+    color: #2ff22c;
+    margin: 0.5rem 0;
+}
+
+.contact-section p {
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-section button {
+    background-color: #2ff22c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #2ff22c;
+}
+
+.contact-section .info {
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ===== Animation d'écriture et de néon pour le message de bienvenue ===== */
+.neon-welcome {
+    color: #05074f; /* Couleur du texte */
+    font-family: 'Courier New', Courier, monospace; /* Police de caractères style machine à écrire */
+    border-right: 2px solid rgba(3, 113, 27, 0.75); /* Création d'un "curseur" */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse du conteneur */
+    animation: 
+        typing 4s steps(30, end), /* Animation de l'écriture */
+        blink-caret .75s step-end infinite; /* Animation du clignotement du curseur */
+    /* Effet de néon */
+    text-shadow: 0 0 5px #e40b49,
+                 0 0 10px #e40b49,
+                 0 0 20px #e40b49,
+                 0 0 40px #e40b49(47, 0, 255),
+                 0 0 80px #e40b49,
+                 0 0 90px #e40b49;
+}
+
+/* Animation pour l'effet d'écriture */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Animation pour le clignotement du curseur */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(254, 3, 3, 0.75); }
+}
