@@ -21,4 +21,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, observerOptions);
 
     observer.observe(welcomeSection);
-});
+
+})
