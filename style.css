@@ -996,3 +996,101 @@ form button:hover {
     .prev-skill { left: -12px; }
     .next-skill { right: -12px; }
 }
+/* ============================================================
+   NAVBAR HORIZONTALE + SECTIONS PAR ONGLET
+   À charger APRÈS style.css
+   ============================================================ */
+:root { --nav-h: 72px; }
+
+body { display: block; }
+
+/* ── Barre de navigation en haut ── */
+.sidebar {
+    width: 100%;
+    height: var(--nav-h);
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 0 28px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    transform: none;
+}
+.sidebar-profile { margin: 0; }
+.sidebar-profile img { width: 44px; height: 44px; }
+.sidebar h2 { margin: 0; white-space: nowrap; font-size: .9rem; }
+.social-icons { margin: 0; }
+.nav-links {
+    display: flex;
+    width: auto;
+    gap: 2px;
+    margin: 0 auto;
+}
+.nav-links li { margin: 0; }
+.nav-links a { padding: 8px 12px; font-size: .8rem; white-space: nowrap; }
+.theme-toggle-sidebar {
+    width: auto;
+    margin: 0;
+    padding: 8px 14px;
+    white-space: nowrap;
+}
+
+/* ── Contenu : une seule section visible à la fois ── */
+.content {
+    margin-left: 0;
+    max-width: 1300px;
+    margin-inline: auto;
+    padding: calc(var(--nav-h) + 24px) 48px 60px;
+}
+.content > section {
+    opacity: 1;
+    transform: none;
+    border-bottom: none;
+    padding: 40px 0;
+}
+.content > section:not(.active) { display: none !important; }
+.content > section.active { display: block; animation: tabFade .35s ease; }
+#accueil.active { display: flex; min-height: calc(100vh - var(--nav-h) - 100px); }
+.scroll-hint { display: none; }
+
+@keyframes tabFade {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .content > section.active { animation: none; }
+}
+
+/* ── Écrans moyens : on resserre la barre ── */
+@media (max-width: 1350px) {
+    .nav-links a i { display: none; }
+    .theme-toggle-sidebar span { display: none; }
+}
+@media (max-width: 1100px) {
+    .sidebar h2, .social-icons { display: none; }
+}
+
+/* ── Mobile : menu déroulant ── */
+@media (max-width: 768px) {
+    .sidebar, .sidebar.open { transform: none; justify-content: flex-end; padding: 0 16px; }
+    .sidebar-profile { display: none; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        margin: 0;
+        padding: 10px 16px;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+    }
+    .sidebar.open .nav-links { display: flex; }
+    .nav-links a i { display: inline-block; }
+    .hamburger { top: 16px; left: 16px; }
+    .content { padding: calc(var(--nav-h) + 16px) 18px 40px; }
+}
