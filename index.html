@@ -15,50 +15,51 @@
 
 <div class="toast" id="toast">✅ Message envoyé !</div>
 
-<button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-</button>
-
-<aside class="sidebar" id="sidebar">
-    <div class="sidebar-profile">
+<!-- ============================================================
+     TOPBAR HORIZONTALE (remplace l'ancienne sidebar verticale)
+     ============================================================ -->
+<header class="topbar" id="topbar">
+    <div class="topbar-brand">
         <img src="images/photo-de-profil.jpg" alt="Imran Poumalis">
-    </div>
-    <h2>Imran Poumalis</h2>
-
-    <div class="social-icons">
-        <a href="https://www.instagram.com/slmpwvo/?__pwa=1#" target="_blank" rel="noopener noreferrer" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-       <!-- <a href="https://www.facebook.com/profile.php?id=61555628522135" target="_blank" rel="noopener noreferrer" title="Messenger">
-            <i class="fab fa-facebook-messenger"></i> -->
-        </a>
-        <a href="https://www.linkedin.com/in/imran-poumalis-b74a0a362/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
+        <span>Imran Poumalis</span>
     </div>
 
-    <ul class="nav-links" id="nav-links">
-        <li><a href="#accueil" class="active"><i class="fas fa-home"></i> Accueil</a></li>
-        <li><a href="#a-propos"><i class="fas fa-user"></i> À Propos</a></li>
-        <li><a href="#BTS-SIO"><i class="fas fa-graduation-cap"></i> BTS SIO</a></li>
-        <li><a href="#parcours"><i class="fas fa-history"></i> Parcours</a></li>
-        <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>   
-        <li><a href="#projets"><i class="fas fa-folder"></i> Projets</a></li>
-        <li><a href="#patrimoine"><i class="fas fa-folder"></i> Patrimoine</a></li>
-        <li><a href="#veilles"><i class="fas fa-newspaper"></i> Veilles</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li> 
-    </ul>
-     <!-- BOUTON DE THÈME -->
-    <button id="theme-toggle" class="theme-toggle-sidebar">
-        <i class="fas fa-moon"></i>
-        <span>Thème sombre</span>
-    </button>
-</aside>
+    <nav class="topbar-nav" id="topbar-nav">
+        <a href="#accueil" class="nav-link active" data-section="accueil"><i class="fas fa-home"></i> Accueil</a>
+        <a href="#a-propos" class="nav-link" data-section="a-propos"><i class="fas fa-user"></i> À Propos</a>
+        <a href="#BTS-SIO" class="nav-link" data-section="BTS-SIO"><i class="fas fa-graduation-cap"></i> BTS SIO</a>
+        <a href="#parcours" class="nav-link" data-section="parcours"><i class="fas fa-history"></i> Parcours</a>
+        <a href="#certifications" class="nav-link" data-section="certifications"><i class="fas fa-certificate"></i> Certifications</a>
+        <a href="#projets" class="nav-link" data-section="projets"><i class="fas fa-folder"></i> Projets</a>
+        <a href="#patrimoine" class="nav-link" data-section="patrimoine"><i class="fas fa-folder-open"></i> Patrimoine</a>
+        <a href="#veilles" class="nav-link" data-section="veilles"><i class="fas fa-newspaper"></i> Veilles</a>
+        <a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/slmpwvo/?__pwa=1#" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/imran-poumalis-b74a0a362/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-topbar" aria-label="Changer le thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
 
 <main class="content">
 
-    <!-- HERO -->
-    <section id="accueil">
+    <!-- ============================================================
+         HERO / ACCUEIL
+         ============================================================ -->
+    <section id="accueil" class="page-section active">
         <div class="hero-bg"><canvas id="particles"></canvas></div>
         <div class="hero-content">
             <h1>Imran Poumalis</h1>
@@ -70,107 +71,91 @@
                 <span class="hero-tag">Cybersécurité</span>
             </div>
         </div>
-        <div class="scroll-hint">
-            <span>&#8595;</span>
-            <span style="font-size:.65rem;letter-spacing:.2em">Défiler</span>
+    </section>
+
+    <!-- ============================================================
+         À PROPOS
+         ============================================================ -->
+    <section id="a-propos" class="page-section">
+        <h2>À Propos</h2>
+
+        <div class="about-container">
+            <div class="about-left">
+                <div class="presentation">
+                    <img src="images/photo-de-profil.jpg" alt="Photo de profil Imran">
+                    <div>
+                        <p><em>Salut, moi c'est <span class="highlight">Imran Poumalis</span></em></p>
+                        <p>Je suis actuellement étudiant au <span class="highlight">lycée Dick Ukeiwé</span> en deuxième année de <span class="highlight">BTS SIO</span> (option <span class="highlight">SISR</span>).</p>
+                        <p>Je me spécialise dans les solutions d'infrastructure, systèmes et réseaux. Mon parcours me permet d'acquérir des compétences en système & réseaux et en sécurité informatique. Actuellement en alternance, j'allie théorie et pratique pour développer encore plus mon expérience.</p>
+                        <a href="Documents/CV-POUMALIS-Imran.pdf" target="_blank" class="cv-button">
+                            <i class="fas fa-download"></i> Télécharger mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <h3>Mes Compétences</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-ticket-alt"></i>
+                        <span>Ticketing</span>
+                        <a href="#" class="skill-link" data-skill="Ticketing">En savoir plus... →</a>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-desktop"></i>
+                        <span>Virtualisation</span>
+                        <a href="#" class="skill-link" data-skill="Virtualisation">En savoir plus... →</a>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-network-wired"></i>
+                        <span>TCP/IP & Réseaux</span>
+                        <a href="#" class="skill-link" data-skill="TCP/IP & Réseaux">En savoir plus... →</a>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-microchip"></i>
+                        <span>Cisco Packet Tracer</span>
+                        <a href="#" class="skill-link" data-skill="Cisco Packet Tracer">En savoir plus... →</a>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-linux"></i>
+                        <span>Linux (Ubuntu/Debian)</span>
+                        <a href="#" class="skill-link" data-skill="Linux">En savoir plus... →</a>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <span>VScode</span>
+                        <a href="#" class="skill-link" data-skill="VScode">En savoir plus... →</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-<!-- À PROPOS -->
-<section id="a-propos">
-    <h2>À Propos</h2>
-    
-    <div class="about-container">
-        <div class="about-left">
-            <div class="presentation">
-                <img src="images/photo-de-profil.jpg" alt="Photo de profil Imran">
-                <div>
-                    <p><em>Salut, moi c'est <span class="highlight">Imran Poumalis</span> </em></p>
-                    <p>Je suis actuellement étudiant au <span class="highlight">lycée Dick Ukeiwé</span> en deuxième année de <span class="highlight">BTS SIO</span> (option <span class="highlight">SISR</span>).</p>
-                    <p>Je me spécialise dans les solutions d'infrastructure, systèmes et réseaux. Mon parcours me permet d'acquérir des compétences en système & réseaux et en sécurité informatique.
-Actuellement en alternance, j'allie théorie et pratique pour développer encore plus mon experience. </p>
-                    <!-- <p>Ce portfolio présente mes études, mes projets professionnels, mon CV ainsi que mes différents projets.</p> -->
-                    <a href="C:\Users\Nemesis\Documents\BTS-SIO\Portfolio\portfolio\Documents\CV-POUMALIS Imran.pdf" target="_blank" class="cv-button">
-                        <i class="fas fa-download"></i> Télécharger mon CV
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="about-right">
-            <h3>Mes Compétences</h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-ticket-alt"></i>
-                    <span>Ticketing</span>
-                    <a href="#" class="skill-link" data-skill="Ticketing">En savoir plus... →</a>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-desktop"></i>
-                    <span>Virtualisation</span>
-                    <a href="#" class="skill-link" data-skill="Virtualisation">En savoir plus... →</a>
-                </div>
-                <!-- <div class="skill-card">
-                    <i class="fas fa-users"></i>
-                    <span>Active Directory</span>
-                    <a href="#" class="skill-link" data-skill="Active Directory">En savoir plus... →</a>
-                </div> -->
-                <div class="skill-card">
-                    <i class="fas fa-network-wired"></i>
-                    <span>TCP/IP & Réseaux</span>
-                    <a href="#" class="skill-link" data-skill="TCP/IP & Réseaux">En savoir plus... →</a>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-microchip"></i>
-                    <span>Cisco Packet Tracer</span>
-                    <a href="#" class="skill-link" data-skill="Cisco Packet Tracer">En savoir plus... →</a>
-                </div>
-                <!--<div class="skill-card">
-                    <i class="fas fa-robot"></i>
-                    <span>IA</span>
-                    <a href="#" class="skill-link" data-skill="IA">En savoir plus... →</a>
-                </div> 
-                <div class="skill-card">
-                    <i class="fab fa-windows"></i>
-                    <span>Windows Server</span>
-                    <a href="#" class="skill-link" data-skill="Windows Server">En savoir plus... →</a>
-                </div> -->
-                <div class="skill-card">
-                    <i class="fab fa-linux"></i>
-                    <span>Linux (Ubuntu/Debian)</span>
-                    <a href="#" class="skill-link" data-skill="Linux">En savoir plus... →</a>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <span>VScode</span>
-                    <a href="#" class="skill-link" data-skill="VScode">En savoir plus... →</a>
-                </div>
+    <!-- ============================================================
+         MODALE COMPÉTENCES
+         ============================================================ -->
+    <div id="skill-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-nav prev-skill" id="prev-skill">❮</button>
+            <span class="modal-close">&times;</span>
+            <h3 id="modal-title">Ticketing</h3>
+            <p id="modal-description"></p>
+            <button class="modal-nav next-skill" id="next-skill">❯</button>
+            <div class="modal-progress">
+                <span id="current-skill-index">1</span> / <span id="total-skills">6</span>
             </div>
         </div>
     </div>
-</section>
 
-<!-- MODALE POUR LES COMPÉTENCES -->
-<div id="skill-modal" class="modal">
-    <div class="modal-content">
-        <button class="modal-nav prev-skill" id="prev-skill">❮</button>
-        <span class="modal-close">&times;</span>
-        <h3 id="modal-title">Ticketing</h3>
-        <p id="modal-description"></p>
-        <button class="modal-nav next-skill" id="next-skill">❯</button>
-        <div class="modal-progress">
-            <span id="current-skill-index">1</span> / <span id="total-skills">6</span>
-        </div>
-    </div>
-</div>
-
-
-    <!-- BTS SIO -->
-    <section id="BTS-SIO">
+    <!-- ============================================================
+         BTS SIO
+         ============================================================ -->
+    <section id="BTS-SIO" class="page-section">
         <h2>BTS SIO</h2>
         <div class="intro-and-careers">
             <div class="card intro-description">
-                <p style=>Le BTS Services Informatiques aux Organisations est une formation en deux ans qui prépare aux métiers de l'informatique</p>
+                <p>Le BTS Services Informatiques aux Organisations est une formation en deux ans qui prépare aux métiers de l'informatique.</p>
                 <h3 class="section-subtitle">Objectifs du BTS</h3>
                 <ul>
                     <li>Gérer un parc informatique ou développer des applications</li>
@@ -224,223 +209,181 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
         </div>
     </section>
 
-<!-- PARCOURS -->
-<section id="parcours">
-    <div class="container">
-        <h2 class="section-title">Mon Parcours</h2>
+    <!-- ============================================================
+         PARCOURS
+         ============================================================ -->
+    <section id="parcours" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
 
-        <div class="parcours-content">
+            <div class="parcours-content">
 
-            <!-- ── FORMATION (GAUCHE) ── -->
-            <div class="parcours-column slide-in-left">
-                <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
+                <!-- FORMATION -->
+                <div class="parcours-column slide-in-left">
+                    <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
+                    <div class="timeline">
 
-                <div class="timeline">
-
-                    <!-- Bac -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo Blaise1.jpg" alt="Logo Lycée Blaise-Pascal">
+                        <div class="timeline-item timeline-anim">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content timeline-card">
+                                <div class="patrimoine-icon">
+                                    <img src="images/logo Blaise1.jpg" alt="Logo Lycée Blaise-Pascal">
+                                </div>
+                                <h4>Bac Général option NSI et physique-chimie</h4>
+                                <p class="timeline-period">2022 - 2024</p>
+                                <p class="timeline-place">Lycée Blaise-Pascal</p>
+                                <p class="timeline-description">Baccalauréat</p>
                             </div>
-                            <h4>Bac Général option NSI et physique-chimie</h4>
-                            <p class="timeline-period">2022 - 2024</p>
-                            <p class="timeline-place">Lycée Blaise-Pascal</p>
-                            <p class="timeline-description">Baccalauréat</p>
                         </div>
-                    </div>
 
-                    <!-- BTS SIO SISR -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo Ukeiwe2.jpg" alt="Logo Dick Ukeiwé">
+                        <div class="timeline-item timeline-anim">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content timeline-card">
+                                <div class="patrimoine-icon">
+                                    <img src="images/logo Ukeiwe2.jpg" alt="Logo Dick Ukeiwé">
+                                </div>
+                                <h4>BTS - SIO SISR</h4>
+                                <p class="timeline-period">2025 - 2026</p>
+                                <p class="timeline-place">Lycée Dick Ukeiwé</p>
+                                <p class="timeline-description">Formation spécialisée en Solutions d'Infrastructure, Systèmes et Réseaux</p>
                             </div>
-                            <h4>BTS - SIO SISR</h4>
-                            <p class="timeline-period">2025 - 2026</p>
-                            <p class="timeline-place">Lycée Dick Ukeiwé</p>
-                            <p class="timeline-description">Formation spécialisée en Solutions d'Infrastructure, Systèmes et Réseaux</p>
                         </div>
+
                     </div>
+                </div>
 
-                </div><!-- fin .timeline -->
-            </div><!-- fin .parcours-column Formation -->
+                <!-- EXPÉRIENCE -->
+                <div class="parcours-column slide-in-right">
+                    <h3><i class="fas fa-briefcase"></i> Expérience</h3>
+                    <div class="timeline">
 
-
-            <!-- ── EXPÉRIENCE (DROITE) ── -->
-            <div class="parcours-column slide-in-right">
-                <h3><i class="fas fa-briefcase"></i> Expérience</h3>
-
-                <div class="timeline">
-
-                    <!-- Stagiaire -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot timeline-dot-exp"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo axains-RS.png" alt="Logo Axians">
+                        <div class="timeline-item timeline-anim">
+                            <div class="timeline-dot timeline-dot-exp"></div>
+                            <div class="timeline-content timeline-card">
+                                <div class="patrimoine-icon">
+                                    <img src="images/logo axains-RS.png" alt="Logo Axians">
+                                </div>
+                                <h4>Stagiaire</h4>
+                                <p class="timeline-period">2025</p>
+                                <p class="timeline-place">Axians</p>
+                                <p class="timeline-description">Découverte du monde professionnel et des métiers de l'informatique</p>
+                                <p class="timeline-description"><strong>Missions :</strong></p>
+                                <p class="timeline-description">- Maintien du SI des écoles</p>
+                                <p class="timeline-description">- Supervision à l'aide de l'outil Zabbix de nos matériels informatiques et ceux des clients</p>
+                                <p class="timeline-description">- Déploiement de téléphone IP avec la plateforme de communication 3CX</p>
                             </div>
-                            <h4>Stagiaire</h4>
-                            <p class="timeline-period">2025</p>
-                            <p class="timeline-place">Axians</p>
-                            <p class="timeline-description">Découverte du monde professionnel et des métiers de l'informatique</p>
-                            <p class="timeline-description"><strong>Missions :</strong></p>
-                            <p class="timeline-description">- Maintien du SI des écoles</p>
-                            <p class="timeline-description">- Supervision à l'aide de l'outil Zabbix de nos matériels informatiques et ceux des clients</p>
-                            <p class="timeline-description">- Déploiement de téléphone IP avec la plateforme de communication 3CX</p>
                         </div>
-                    </div>
 
-                    <!-- Alternant technicien infogérance -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot timeline-dot-exp"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo axains-RS.png" alt="Logo Axians">
+                        <div class="timeline-item timeline-anim">
+                            <div class="timeline-dot timeline-dot-exp"></div>
+                            <div class="timeline-content timeline-card">
+                                <div class="patrimoine-icon">
+                                    <img src="images/logo axains-RS.png" alt="Logo Axians">
+                                </div>
+                                <h4>Alternant technicien infogérance</h4>
+                                <p class="timeline-period">2026</p>
+                                <p class="timeline-place">Axians</p>
+
+                                <h3 class="timeline-description">Missions 1</h3>
+                                <h4 class="timeline-description">Infogérance, gestion du parc informatique</h4>
+
+                                <h3 class="timeline-description">Missions 2</h3>
+                                <h4 class="timeline-description">Administration et supervision des systèmes :</h4>
+                                <p class="timeline-description">Objectif : Assurer la disponibilité et la performance des serveurs et équipements réseau</p>
+
+                                <h3 class="timeline-description">Missions 3</h3>
+                                <h4 class="timeline-description">Gestion des incidents et support technique :</h4>
+                                <p class="timeline-description">Objectif : Participer à la résolution des problèmes liés aux infrastructures</p>
+
+                                <h3 class="timeline-description">Missions 4</h3>
+                                <h4 class="timeline-description">Déploiement et sécurisation des infrastructures :</h4>
+                                <p class="timeline-description">Objectif : Contribuer à l'évolution et à la sécurisation du SI</p>
                             </div>
-                           <h4>Alternant technicien infogérance</h4>
-        <p class="timeline-period">2026</p>
-        <p class="timeline-place">Axians</p>
+                        </div>
 
-        <h3 class="timeline-description">Missions 1</h3>
-        <h4 class="timeline-description">Infogérance, gestion du parc informatique</h4>
-
-        <h3 class="timeline-description">Missions 2</h3>
-        <h4 class="timeline-description">Administration et supervision des systèmes :</h4>
-        <p class="timeline-description">Objectif : Assurer la disponibilité et la performance des serveurs et équipements réseau</p>
-
-        <h3 class="timeline-description">Missions 3</h3>
-        <h4 class="timeline-description">Gestion des incidents et support technique :</h4>
-        <p class="timeline-description">Objectif : Participer à la résolution des problèmes liés aux infrastructures</p>
-
-        <h3 class="timeline-description">Missions 4</h3>
-        <h4 class="timeline-description">Déploiement et sécurisation des infrastructures :</h4>
-        <p class="timeline-description">Objectif : Contribuer à l'évolution et à la sécurisation du SI</p>
-    </div>
                     </div>
+                </div>
 
-                </div><!-- fin .timeline -->
-            </div><!-- fin .parcours-column Expérience -->
+            </div>
+        </div>
+    </section>
 
-        </div><!-- fin .parcours-content -->
-    </div><!-- fin .container -->
-</section>
+    <!-- ============================================================
+         CERTIFICATIONS
+         ============================================================ -->
+    <section id="certifications" class="page-section">
+        <div class="certifications-header">
+            <h2>Certifications</h2>
+            <p class="certifications-subtitle">Mes formations et attestations obtenues</p>
+        </div>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-    <div class="certifications-header">
-        <h2>Certifications</h2>
-        <p class="certifications-subtitle">Mes formations et attestations obtenues</p>
-    </div>
-    
-    
-    <div class="certifications-grid">
-        <!-- Carte cisco support -->
-         <div class="patrimoine-card">
+        <div class="certifications-grid">
+
+            <div class="patrimoine-card">
                 <div class="present">
-            <img src="images/screen support.png" alt="Packet Tracer">
-             </div>
-            <h3>Support et sécurité des réseaux</h3>
-            <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
-            <div class="certification-tags">
+                    <img src="images/screen support.png" alt="Packet Tracer">
+                </div>
+                <h3>Support et sécurité des réseaux</h3>
+                <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
+                <div class="certification-footer">
+                    <span class="certification-date">2025</span>
+                </div>
             </div>
-            <div class="certification-footer">
-                <span class="certification-date">2025</span>
-                <!-- <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a> -->
+
+            <div class="patrimoine-card">
+                <div class="present">
+                    <img src="images/screen notions.png" alt="Packet Tracer">
+                </div>
+                <h3>Notions base sur les réseaux</h3>
+                <p>Commencez à apprendre les bases des réseaux informatiques et découvrez le fonctionnement des réseaux.</p>
+                <div class="certification-footer">
+                    <span class="certification-date">2026</span>
+                </div>
             </div>
+
+            <div class="patrimoine-card">
+                <div class="present">
+                    <img src="images/certif cybersecu.png" alt="Packet Tracer">
+                </div>
+                <h3>Menaces pour la cybersécurité</h3>
+                <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
+                <div class="certification-footer">
+                    <span class="certification-date">2025</span>
+                </div>
+            </div>
+
+            <div class="patrimoine-card">
+                <div class="present">
+                    <img src="images/certif hacker.png" alt="Packet Tracer">
+                </div>
+                <h3>Hackers éthiques</h3>
+                <p>Apprenez l'art de la sécurité offensive pour découvrir les cybermenaces et les vulnérabilités avant les cybercriminels.</p>
+                <div class="certification-footer">
+                    <span class="certification-date">2026</span>
+                </div>
+            </div>
+
+            <div class="patrimoine-card">
+                <div class="present">
+                    <img src="images/certif pix.png" alt="Pix">
+                </div>
+                <h3>PIX</h3>
+                <p>Certification numérique des compétences</p>
+                <div class="certification-footer">
+                    <span class="certification-date">2026</span>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- Carte RGPD Module 2 -->
-        <div class="patrimoine-card">
-            <div class="present">
-            <img src="images/screen notions.png" alt="Packet Tracer">
-             </div>
-            <h3>Notions base sur les réseaux</h3>
-            <p>Commencez à apprendre les bases des réseaux informatiques et découvrez le fonctionnement des réseaux.</p>
-           <!-- <div class="certification-tags">
-                <span class="certification-tag"></span>
-                <span class="certification-tag">Data Privacy</span>
-            </div> -->
-            <div class="certification-footer">
-                <span class="certification-date">2026</span>
-                <!-- <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-        </div>
-
-        <!-- Carte RGPD Module 3 -->
-        <div class="patrimoine-card">
-            <div class="present">
-            <img src="images/certif cybersecu.png" alt="Packet Tracer">
-             </div>
-            <h3>Menaces pour la cybersécurité</h3>
-            <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
-            <!--<div class="certification-tags">
-                <span class="certification-tag"> </span>
-            </div> -->
-            <div class="certification-footer">
-                <span class="certification-date">2025</span>
-                <!-- <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-        </div>
-
-        <!-- Carte ANSSI - SecNum Académie (exemple supplémentaire) -->
-        <div class="patrimoine-card">
-            <div class="present">
-            <img src="images/certif hacker.png" alt="Packet Tracer">
-             </div>
-            <h3>hackers ethique</h3>
-            <p>Apprenez l'art de la sécurité offensive pour découvrir les cybermenaces et les vulnérabilités avant les cybercriminels.</p>
-           <!-- <div class="certification-tags">
-                <span class="certification-tag"></span>
-            </div>-->
-            <div class="certification-footer">
-                <span class="certification-date">2026</span>
-                <!-- <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-        </div>
-
-        <!-- Carte PIX -->
-        <div class="patrimoine-card">
-            <div class="present">
-            <img src="images/certif pix.png" alt="Pix">
-             </div>
-            <h3>PIX</h3>
-            <p>Certification numérique des compétences</p>
-            <!--  <div class="certification-tags">
-                <span class="certification-tag">Numérique</span>
-                <span class="certification-tag">Compétences</span>
-            </div> -->
-           <div class="certification-footer">
-                <span class="certification-date">2026</span>
-                <!-- <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a>
-            </div> -->
-        </div>
-
-        <!-- Carte Cisco Networking Basics -->
-   <!--      <div class="certification-card">
-            <div class="certification-icon">
-                <i class="fas fa-network-wired"></i>
-            </div>
-           <h3>Cisco Networking Basics</h3>
-            <p>Introduction aux réseaux et à Cisco</p>
-            <div class="certification-tags">
-                <span class="certification-tag">Réseaux</span>
-                <span class="certification-tag">Cisco</span>
-            </div>
-            <div class="certification-footer">
-                <span class="certification-date">2024</span>
-                <a href="#" class="certification-link">Voir l'attestation <i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>  -->
-    </div>
-</section>
-
-    <!-- PROJETS -->
-    <section id="projets">
+    <!-- ============================================================
+         PROJETS
+         ============================================================ -->
+    <section id="projets" class="page-section">
         <h2>Projets</h2>
         <div class="projects-grid">
+
             <div class="project-card">
                 <div class="project-icon">🌐</div>
                 <h3>Portfolio Web</h3>
@@ -451,338 +394,165 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                     <span class="project-tag">JavaScript</span>
                 </div>
             </div>
+
             <div class="project-card">
                 <div class="project-icon">🖧</div>
                 <h3>TechForm NC</h3>
-                <h4> Equipe Audit & Inventaire</h4>
-                <p>Nos missions sont :
-                  <p>- réaliser un inventaire exhaustif des actifs </p>
-                  <p>-identifier les actifs critiques</p>
-                  <p>-analyser les vulnérabilités potentielles</p>
-                  <p>-qualifier les risques techniques et organisationnels</p>
-                  <p>-produire une cartographie détaillée du système d’information</p>
-                </p>
+                <h4>Équipe Audit & Inventaire</h4>
+                <p>Nos missions sont :</p>
+                <p>- réaliser un inventaire exhaustif des actifs</p>
+                <p>- identifier les actifs critiques</p>
+                <p>- analyser les vulnérabilités potentielles</p>
+                <p>- qualifier les risques techniques et organisationnels</p>
+                <p>- produire une cartographie détaillée du système d'information</p>
                 <div class="project-tags">
                     <span class="project-tag">Réseau</span>
                     <span class="project-tag">Sécurité</span>
                     <span class="project-tag">Linux</span>
                 </div>
             </div>
-            <div class="projects-grid">
+
             <div class="project-card">
                 <div class="project-icon">🌐</div>
                 <h3>Serveur PXE iVentoy en environnement VMware ESXi (Axians)</h3>
-                <p>Objectif:</p>
+                <p>Objectif :</p>
                 <p>Mettre en place un serveur de démarrage réseau (PXE) permettant de déployer des images système (Linux, Windows) sur plusieurs machines simultanément, sans support physique (USB/DVD), dans un environnement virtualisé ESXi.</p>
-                <!--<div class="project-tags">
-                   <span class="project-tag">HTML</span>
-                    <span class="project-tag">CSS</span>
-                    <span class="project-tag">JavaScript</span>
-                </div>-->
             </div>
+
+        </div>
     </section>
 
-<!-- PATRIMOINE INFORMATIQUE -->
-<section id="patrimoine">
-    <h2>Patrimoine informatique</h2>
-    
-    <div class="patrimoine-grid">
-        <!-- Carte Packet Tracer -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-icon">
-            <img src="images/logo packet tracer 2.png" alt="Packet Tracer">
-             </div>
-            <h3>Packet Tracer</h3>
-            <p>Outil de simulation qui nous a permis de créer des infrastructures réseaux. J'ai réalisé de nombreux TP pour maîtriser la configuration des équipements Cisco.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Simulation</span>
-                <span class="patrimoine-tag">Cisco</span>
-                <span class="patrimoine-tag">Réseaux</span>
-            </div>
-        </div>
-        
-        <!-- Carte Nmap -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-icon">
-            <img src="images/logo nmap 3.jpg" alt="Nmap">
-             </div>
-            <h3>Nmap</h3>
-            <p>Nmap permet de répondre à des questions essentielles : Quelles machines sont actives sur le réseau ? (découverte d'hôtes) Quels ports sont ouverts sur ces machines ? (scan de ports) Quels services tournent derrière ces ports ? (détection de services).</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Réseau</span>
-                <span class="patrimoine-tag">Sécurité</span>
-                <span class="patrimoine-tag">Linux</span>
-            </div>
-        </div>
+    <!-- ============================================================
+         PATRIMOINE INFORMATIQUE
+         ============================================================ -->
+    <section id="patrimoine" class="page-section">
+        <h2>Patrimoine informatique</h2>
 
-        <!-- Carte OCS Inventory -->
-        <div class="patrimoine-card">
+        <div class="patrimoine-grid">
+
+            <div class="patrimoine-card">
                 <div class="patrimoine-icon">
-                <img src="images/logo ocs.jpg" alt="OCS">
+                    <img src="images/logo packet tracer 2.png" alt="Packet Tracer">
+                </div>
+                <h3>Packet Tracer</h3>
+                <p>Outil de simulation qui nous a permis de créer des infrastructures réseaux. J'ai réalisé de nombreux TP pour maîtriser la configuration des équipements Cisco.</p>
+                <div class="patrimoine-tags">
+                    <span class="patrimoine-tag">Simulation</span>
+                    <span class="patrimoine-tag">Cisco</span>
+                    <span class="patrimoine-tag">Réseaux</span>
+                </div>
             </div>
-            <h3>OCS Inventory</h3>
-            <p>Outil d'inventaire et de gestion de parc informatique. OCS Inventory permet de recenser automatiquement l'ensemble des équipements (PC, serveurs, périphériques) d'une infrastructure, ainsi que leurs logiciels et configurations matérielles.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Inventaire</span>
-                <span class="patrimoine-tag">Gestion de parc</span>
-                <span class="patrimoine-tag">Agent</span>
-            </div>
-        </div>
 
-        <!-- Carte GLPI -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-icon">
-            <img src="images/logo GLPI.png" alt="GLPI">
+            <div class="patrimoine-card">
+                <div class="patrimoine-icon">
+                    <img src="images/logo nmap 3.jpg" alt="Nmap">
+                </div>
+                <h3>Nmap</h3>
+                <p>Nmap permet de répondre à des questions essentielles : Quelles machines sont actives sur le réseau ? Quels ports sont ouverts sur ces machines ? Quels services tournent derrière ces ports ?</p>
+                <div class="patrimoine-tags">
+                    <span class="patrimoine-tag">Réseau</span>
+                    <span class="patrimoine-tag">Sécurité</span>
+                    <span class="patrimoine-tag">Linux</span>
+                </div>
             </div>
-            <h3>GLPI</h3>
-            <p>Solution de gestion des services informatiques (ITSM) et de gestion des parcs informatiques. GLPI permet de gérer les tickets d'incidents, les demandes d'assistance, les contrats, les factures et les inventaires matériels et logiciels.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Ticketing</span>
-                <span class="patrimoine-tag">ITSM</span>
-                <span class="patrimoine-tag">Gestion de parc</span>
-            </div>
-        </div>
 
-        <!-- Carte OCS + GLPI (synergie) -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-icon">
-            <img src="images/logo_ocs_glpi.png" alt="glpi-ocs">
+            <div class="patrimoine-card">
+                <div class="patrimoine-icon">
+                    <img src="images/logo ocs.jpg" alt="OCS">
+                </div>
+                <h3>OCS Inventory</h3>
+                <p>Outil d'inventaire et de gestion de parc informatique. OCS Inventory permet de recenser automatiquement l'ensemble des équipements d'une infrastructure, ainsi que leurs logiciels et configurations matérielles.</p>
+                <div class="patrimoine-tags">
+                    <span class="patrimoine-tag">Inventaire</span>
+                    <span class="patrimoine-tag">Gestion de parc</span>
+                    <span class="patrimoine-tag">Agent</span>
+                </div>
             </div>
-            <h3>OCS + GLPI</h3>
-            <p>Synergie entre OCS Inventory et GLPI : OCS collecte les informations du parc informatique (matériel, logiciels) et GLPI les exploite pour la gestion des tickets, des interventions et la traçabilité des équipements. Une solution complète pour l'administration des systèmes d'information.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Synergie</span>
-                <span class="patrimoine-tag">Plugins</span>
-                <span class="patrimoine-tag">Automatisation</span>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- VEILLES -->
-    <section id="veilles">
+            <div class="patrimoine-card">
+                <div class="patrimoine-icon">
+                    <img src="images/logo GLPI.png" alt="GLPI">
+                </div>
+                <h3>GLPI</h3>
+                <p>Solution de gestion des services informatiques (ITSM) et de gestion des parcs informatiques. GLPI permet de gérer les tickets d'incidents, les demandes d'assistance, les contrats, les factures et les inventaires.</p>
+                <div class="patrimoine-tags">
+                    <span class="patrimoine-tag">Ticketing</span>
+                    <span class="patrimoine-tag">ITSM</span>
+                    <span class="patrimoine-tag">Gestion de parc</span>
+                </div>
+            </div>
+
+            <div class="patrimoine-card">
+                <div class="patrimoine-icon">
+                    <img src="images/logo_ocs_glpi.png" alt="glpi-ocs">
+                </div>
+                <h3>OCS + GLPI</h3>
+                <p>Synergie entre OCS Inventory et GLPI : OCS collecte les informations du parc informatique et GLPI les exploite pour la gestion des tickets, des interventions et la traçabilité des équipements.</p>
+                <div class="patrimoine-tags">
+                    <span class="patrimoine-tag">Synergie</span>
+                    <span class="patrimoine-tag">Plugins</span>
+                    <span class="patrimoine-tag">Automatisation</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+         VEILLES
+         ============================================================ -->
+    <section id="veilles" class="page-section">
         <h2>Veilles Technologiques</h2>
-              <h1>₿ Les cryptomonnaies</h1>
-        <!-- VEILLES TECHNOLOGIQUES -->
-<section id="veilles">
-    <div class="container">
-    <div class="present">
-        <a href="Documents/cryptomonnaies.pdf" class="profile-link">
-            <img src="images/Veille techno.png" alt="Veille techno"></a>    
-        <div>
-        <div class="slider-container">
-            <button id="prev-slide" class="slider-arrow prev-arrow">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="slider-wrapper">
-                <!-- Slide 1 - Septembre/Octobre 2024 -->
-                <div class="slide-card active">
-                    <div class="slide-period">Avril 2026</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <!--<div class="article-source"></div>-->
-                            <div class="article-date">Avril 2026</div>
-                            <h4>LiquidChain : L'Unification des Blockchains</h4>
-                            <p>Une couche blockchain de niveau 3 (L3) conçue pour connecter Bitcoin, Ethereum et Solana en une infrastructure unifiée. Contrairement aux solutions existantes, LiquidChain propose une interopérabilité native sans bridges externes vulnérables.</p>
-                            <a href="https://lightpaper.liquidchain.com/" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+        <h1>₿ Les cryptomonnaies</h1>
+
+        <div class="container">
+            <div class="present">
+                <a href="Documents/cryptomonnaies.pdf" class="profile-link">
+                    <img src="images/Veille techno.png" alt="Veille techno">
+                </a>
+                <div class="slider-container">
+                    <button id="prev-slide" class="slider-arrow prev-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-wrapper">
+
+                        <div class="slide-card active">
+                            <div class="slide-period">Avril 2026</div>
+                            <div class="articles-list">
+                                <div class="article-item">
+                                    <div class="article-date">Avril 2026</div>
+                                    <h4>LiquidChain : L'Unification des Blockchains</h4>
+                                    <p>Une couche blockchain de niveau 3 (L3) conçue pour connecter Bitcoin, Ethereum et Solana en une infrastructure unifiée. Contrairement aux solutions existantes, LiquidChain propose une interopérabilité native sans bridges externes vulnérables.</p>
+                                    <a href="https://lightpaper.liquidchain.com/" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+
+                                <div class="article-item">
+                                    <div class="article-date">Avril 2026</div>
+                                    <h4>BlackRock Lance les Fonds Tokenisés</h4>
+                                    <p>Tokenisation à tous les étages. Le titan de la gestion d'actifs, BlackRock, va bien au-delà de ses ETF au comptant sur Bitcoin et Ethereum dans sa plongée dans la cryptosphère. Le géant financier aux près de 14 000 milliards d'actifs sous gestion a également embrassé les avancées technologies du marché crypto pour opérer la tokenisation de fonds traditionnels.</p>
+                                    <a href="https://journalducoin.com/actualites/blackrock-accelere-tokenisation-deux-nouveaux-fonds-tokenises-ethereum/" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="article-item">
-                            <!--<div class="article-source"></div>-->
-                            <div class="article-date">Avril 2026</div>
-                            <h4>BlackRock Lance les Fonds Tokenisés</h4>
-                            <p>Tokenisation à tous les étages. Le titan de la gestion d’actifs, BlackRock, va bien au-delà de ses ETF au comptant sur Bitcoin et Ethereum dans sa plongée dans la cryptosphère. Le géant financier aux près de 14 000 milliards d’actifs sous gestion a également embrassé les avancées technologies du marché crypto pour opérer la tokenisation de fonds traditionnels.</p>
-                            <a href="https://journalducoin.com/actualites/blackrock-accelere-tokenisation-deux-nouveaux-fonds-tokenises-ethereum/" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
+
                     </div>
-                </div>
-<!--
-                <!-- Slide 2 - Novembre/Décembre 2024 
-                <div class="slide-card">
-                    <div class="slide-period">Novembre - Décembre 2024</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">Le Monde Informatique</div>
-                            <div class="article-date">18 novembre 2024</div>
-                            <h4>L'IA accélère la modernisation des datacenters</h4>
-                            <p>Besoin de nouveaux serveurs, GPU et systèmes de refroidissement adaptés à l'IA.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Gartner</div>
-                            <div class="article-date">4 décembre 2024</div>
-                            <h4>Prévisions IT 2025</h4>
-                            <p>Les infrastructures IA deviennent un moteur majeur des dépenses IT en entreprise.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
+
+                    <button id="next-slide" class="slider-arrow next-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
 
-    
-
-                <!-- Slide 3 - Janvier/Février 2025
-                <div class="slide-card">
-                    <div class="slide-period">Janvier - Février 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">PwC</div>
-                            <div class="article-date">15 janvier 2025</div>
-                            <h4>IA et pression énergétique des infrastructures</h4>
-                            <p>Les entreprises doivent adapter leurs infrastructures pour maîtriser la consommation énergétique de l'IA.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">AI Action Summit</div>
-                            <div class="article-date">8 février 2025</div>
-                            <h4>Investissements européens en IA</h4>
-                            <p>Déploiement de "AI factories" pour les entreprises européennes.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
                 </div>
-
-                <!-- Slide 4 - Mars/Avril 2025 
-                <div class="slide-card">
-                    <div class="slide-period">Mars - Avril 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">Reuters</div>
-                            <div class="article-date">19 mars 2025</div>
-                            <h4>Les entreprises investissent dans les GPU pour l'IA</h4>
-                            <p>Les GPU deviennent un composant clé des infrastructures d'entreprise.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Gartner</div>
-                            <div class="article-date">9 avril 2025</div>
-                            <h4>Forte hausse des investissements dans les infrastructures IA</h4>
-                            <p>Les entreprises accélèrent leurs dépenses en infrastructures dédiées à l'IA.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 5 - Mai/Juin 2025 
-                <div class="slide-card">
-                    <div class="slide-period">Mai - Juin 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">Oracle</div>
-                            <div class="article-date">14 mai 2025</div>
-                            <h4>Investissements cloud IA en Europe</h4>
-                            <p>Renforcement des infrastructures cloud IA accessibles aux entreprises.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Accenture</div>
-                            <div class="article-date">6 juin 2025</div>
-                            <h4>IA en entreprise</h4>
-                            <p>Passage de projets pilotes IA à des infrastructures stables et sécurisées.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 6 - Juillet/Août 2025 
-                <div class="slide-card">
-                    <div class="slide-period">Juillet - Août 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">NVIDIA</div>
-                            <div class="article-date">11 juillet 2025</div>
-                            <h4>Optimisation des infrastructures IA d'entreprise</h4>
-                            <p>Amélioration du rendement GPU et réduction des coûts d'infrastructure IA.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Harvard Business Review</div>
-                            <div class="article-date">22 août 2025</div>
-                            <h4>Why Hybrid Cloud Is Key for AI</h4>
-                            <p>Les entreprises privilégient le cloud hybride pour leurs applications IA.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 7 - Septembre/Octobre 2025 
-                <div class="slide-card">
-                    <div class="slide-period">Septembre - Octobre 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">McKinsey</div>
-                            <div class="article-date">9 septembre 2025</div>
-                            <h4>Scaling AI Across the Enterprise</h4>
-                            <p>Difficultés de passage à l'échelle sans infrastructures adaptées.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Le Monde Informatique</div>
-                            <div class="article-date">16 octobre 2025</div>
-                            <h4>L'IA transforme les architectures IT</h4>
-                            <p>Nouvelles architectures SI orientées IA (API, data platforms).</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 8 - Novembre/Décembre 2025 
-                <div class="slide-card">
-                    <div class="slide-period">Novembre - Décembre 2025</div>
-                    <div class="articles-list">
-                        <div class="article-item">
-                            <div class="article-source">Reuters</div>
-                            <div class="article-date">21 novembre 2025</div>
-                            <h4>Partenariats stratégiques IA en entreprise</h4>
-                            <p>Alliances technologiques pour intégrer l'IA dans les infrastructures existantes.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                        
-                        <div class="article-item">
-                            <div class="article-source">Gartner</div>
-                            <div class="article-date">5 décembre 2025</div>
-                            <h4>AI as a Core Enterprise Infrastructure</h4>
-                            <p>L'IA devient un pilier central des infrastructures IT d'entreprise.</p>
-                            <a href="#" class="article-link">Lire l'article <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div> -->
-            </div> 
-
-
-            <button id="next-slide" class="slider-arrow next-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            </div>
         </div>
+    </section>
 
-        <!-- Indicateurs -->
-        <div class="slider-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-           <!-- <span class="dot" data-slide="3"></span>
-            <span class="dot" data-slide="4"></span>
-            <span class="dot" data-slide="5"></span>
-            <span class="dot" data-slide="6"></span>
-            <span class="dot" data-slide="7"></span> -->
-        </div>
-
-        <!-- Conclusion
-        <div class="conclusion-card">
-            <h3>📌 Conclusion de la veille (2024-2026)</h3>
-            <p>Entre 2024 et 2026, l'IA est passée d'une phase de test à une utilisation réelle et quotidienne dans les entreprises. On ne se contente plus de poser des questions à l'IA : on utilise désormais des agents autonomes capables de réaliser des tâches complexes pour gagner en efficacité. Pour les services informatiques, l'enjeu principal est devenu de fournir la puissance nécessaire tout en protégeant les données et en limitant la consommation d'énergie. En résumé, l'IA est devenue le cœur des systèmes d'information modernes.</p>
-        </div>-->
-    </div>
-</section>
-  <script src="Java.ai"></script>
-    
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="contact-section page-section" id="contact">
         <h2>📬 Contact</h2>
         <div class="row">
             <div class="col info">
@@ -806,107 +576,6 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 
 </main>
 
-<script>
-// ── Custom cursor ──
-const cursor = document.getElementById('cursor');
-const ring   = document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
-(function lerp(){rx+=(mx-rx)*.18; ry+=(my-ry)*.18; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(lerp);})();
-document.querySelectorAll('a,button,.card,.project-card,.veille-card,.comp-card').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{ ring.style.width='52px'; ring.style.height='52px'; ring.style.borderColor='rgba(0,212,255,.9)'; });
-    el.addEventListener('mouseleave',()=>{ ring.style.width='36px'; ring.style.height='36px'; ring.style.borderColor='rgba(0,212,255,.6)'; });
-});
-
-// ── Particles canvas ──
-const canvas=document.getElementById('particles');
-const ctx=canvas.getContext('2d');
-let W,H,particles=[];
-function resize(){ W=canvas.width=canvas.parentElement.offsetWidth; H=canvas.height=canvas.parentElement.offsetHeight; }
-resize(); window.addEventListener('resize',resize);
-for(let i=0;i<70;i++) particles.push({
-    x:Math.random()*W, y:Math.random()*H,
-    vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.3,
-    r:Math.random()*2+.5, a:Math.random()
-});
-function drawParticles(){
-    ctx.clearRect(0,0,W,H);
-    particles.forEach(p=>{
-        p.x+=p.vx; p.y+=p.vy;
-        if(p.x<0||p.x>W) p.vx*=-1;
-        if(p.y<0||p.y>H) p.vy*=-1;
-        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle=`rgba(0,212,255,${p.a*.6})`; ctx.fill();
-    });
-    // Connect close particles
-    particles.forEach((a,i)=>{ particles.slice(i+1).forEach(b=>{
-        const d=Math.hypot(a.x-b.x,a.y-b.y);
-        if(d<100){ ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);
-            ctx.strokeStyle=`rgba(0,212,255,${.15*(1-d/100)})`; ctx.lineWidth=.6; ctx.stroke(); }
-    });});
-    requestAnimationFrame(drawParticles);
-}
-drawParticles();
-
-// ── Intersection Observer (scroll reveal) ──
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-        if(e.isIntersecting){
-            e.target.classList.add('visible');
-            // progress bars
-            e.target.querySelectorAll('.progress-fill').forEach(bar=>{
-                bar.style.width = bar.dataset.width+'%';
-            });
-            // timeline items with stagger
-            e.target.querySelectorAll('.timeline-item').forEach((item,i)=>{
-                setTimeout(()=>item.classList.add('visible'),i*150);
-            });
-            // counter animation
-            e.target.querySelectorAll('.num[data-target]').forEach(el=>{
-                const target=+el.dataset.target; let n=0;
-                const step=()=>{ n=Math.min(n+1,target); el.textContent=n; if(n<target) setTimeout(step,80); };
-                setTimeout(step,300);
-            });
-        }
-    });
-},{ threshold:.12 });
-document.querySelectorAll('section').forEach(s=>observer.observe(s));
-
-// ── Active nav on scroll ──
-const sections=[...document.querySelectorAll('section[id]')];
-const navLinks=[...document.querySelectorAll('.nav-links a')];
-window.addEventListener('scroll',()=>{
-    const top=window.scrollY+140;
-    sections.forEach(s=>{
-        if(top>=s.offsetTop && top < s.offsetTop+s.offsetHeight){
-            navLinks.forEach(a=>a.classList.remove('active'));
-            const link=document.querySelector(`.nav-links a[href="#${s.id}"]`);
-            if(link) link.classList.add('active');
-        }
-    });
-});
-
-// ── Mobile hamburger ──
-const hamburger=document.getElementById('hamburger');
-const sidebar=document.getElementById('sidebar');
-hamburger.addEventListener('click',()=>sidebar.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>sidebar.classList.remove('open')));
-
-// ── Contact form toast ──
-const form=document.getElementById('contactForm');
-const toast=document.getElementById('toast');
-form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    const btn=form.querySelector('button');
-    btn.textContent='Envoi en cours…'; btn.disabled=true;
-    try{
-        const res=await fetch(form.action,{ method:'POST', body:new FormData(form), headers:{Accept:'application/json'} });
-        if(res.ok){ form.reset(); showToast('✅ Message envoyé avec succès !'); }
-        else showToast('❌ Erreur, réessayez.');
-    } catch(err){ showToast('❌ Erreur réseau.'); }
-    btn.textContent='Envoyer le message'; btn.disabled=false;
-});
-function showToast(msg){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3500); }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
