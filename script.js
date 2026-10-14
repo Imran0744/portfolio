@@ -199,3 +199,33 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('hashchange', () => showTab(location.hash.slice(1)));
     showTab(location.hash.slice(1) || 'accueil');
 });
+
+
+// Certifications : fenêtre "En savoir plus"
+document.addEventListener("DOMContentLoaded", function () {
+    const certModal = document.getElementById('cert-modal');
+    if (!certModal) return;
+    const mImg = document.getElementById('cert-modal-img');
+    const mDate = document.getElementById('cert-modal-date');
+    const mTitle = document.getElementById('cert-modal-title');
+    const mDesc = document.getElementById('cert-modal-desc');
+
+    function openCert(card) {
+        const img = card.querySelector('.cert-thumb img');
+        mImg.src = img.getAttribute('src');
+        mImg.alt = img.alt;
+        mDate.textContent = card.querySelector('.cert-date').textContent;
+        mTitle.textContent = card.querySelector('h3').textContent;
+        mDesc.textContent = card.querySelector('.cert-body p').textContent;
+        certModal.style.display = 'flex';
+    }
+    function closeCert() { certModal.style.display = 'none'; }
+
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.querySelectorAll('.cert-thumb, .cert-more').forEach(btn =>
+            btn.addEventListener('click', () => openCert(card)));
+    });
+    document.getElementById('cert-modal-close').addEventListener('click', closeCert);
+    certModal.addEventListener('click', e => { if (e.target === certModal) closeCert(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCert(); });
+});
