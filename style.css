@@ -995,6 +995,8 @@ form button:hover {
     }
     .prev-skill { left: -12px; }
     .next-skill { right: -12px; }
+}
+
 /* ============================================================
    NAVBAR HORIZONTALE + SECTIONS PAR ONGLET
    À charger APRÈS style.css
@@ -1092,5 +1094,4 @@ body { display: block; }
     .nav-links a i { display: inline-block; }
     .hamburger { top: 16px; left: 16px; }
     .content { padding: calc(var(--nav-h) + 16px) 18px 40px; }
-}
 }
