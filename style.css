@@ -1095,3 +1095,86 @@ body { display: block; }
     .hamburger { top: 16px; left: 16px; }
     .content { padding: calc(var(--nav-h) + 16px) 18px 40px; }
 }
+
+
+/* ============================================================
+   PARCOURS : timeline centrale (Formation à gauche, Expérience à droite)
+   ============================================================ */
+.pt-legend { display: flex; justify-content: center; gap: 14px; margin-bottom: 36px; }
+.pt-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 18px; border-radius: 999px;
+    font-size: .8rem; font-weight: 700; color: #fff;
+}
+.pt-pill.pt-formation { background: var(--accent); }
+.pt-pill.pt-experience { background: var(--accent3); }
+
+.pt { position: relative; max-width: 1050px; margin: 0 auto; padding: 8px 0; }
+.pt::before {
+    content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px;
+    transform: translateX(-50%); border-radius: 4px;
+    background: linear-gradient(var(--accent), var(--accent3));
+}
+
+.pt-item { position: relative; width: 50%; padding: 0 64px 44px 0; }
+.pt-item.pt-experience { margin-left: 50%; padding: 0 0 44px 64px; }
+
+/* pastille sur la ligne */
+.pt-node {
+    position: absolute; top: 14px; width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 1rem; z-index: 2;
+    border: 4px solid var(--bg); box-shadow: 0 0 0 2px var(--accent);
+}
+.pt-formation .pt-node { right: -23px; background: var(--accent); }
+.pt-experience .pt-node { left: -23px; background: var(--accent3); box-shadow: 0 0 0 2px var(--accent3); }
+
+/* trait de liaison entre la pastille et la carte */
+.pt-item::before { content: ''; position: absolute; top: 35px; height: 3px; width: 42px; z-index: 1; }
+.pt-formation::before { right: 23px; background: var(--accent); }
+.pt-experience::before { left: 23px; background: var(--accent3); }
+
+.pt-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+    padding: 22px 24px; transition: transform .3s, border-color .3s;
+}
+.pt-card:hover { transform: translateY(-4px); }
+.pt-formation .pt-card { border-top: 4px solid var(--accent); }
+.pt-experience .pt-card { border-top: 4px solid var(--accent3); }
+.pt-formation .pt-card:hover { border-color: var(--accent); }
+.pt-experience .pt-card:hover { border-color: var(--accent3); }
+
+.pt-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.pt-logo {
+    width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;
+    background: var(--card2); border: 1px solid var(--border); border-radius: 14px; padding: 6px;
+}
+.pt-period { font-size: .78rem; font-weight: 700; }
+.pt-formation .pt-period { color: var(--accent); }
+.pt-experience .pt-period { color: var(--accent3); }
+.pt-card h4 { font-size: 1.05rem; margin: 2px 0; }
+.pt-place { font-weight: 700; color: var(--muted); font-size: .85rem; }
+.pt-text { font-size: .9rem; color: var(--muted); }
+.pt-subtitle { font-weight: 700; font-size: .85rem; margin: 12px 0 6px; }
+.pt-list { padding-left: 18px; font-size: .88rem; color: var(--muted); }
+.pt-list li { margin-bottom: 6px; }
+.pt-missions { list-style: none; padding-left: 0; }
+.pt-missions li { padding-left: 14px; border-left: 3px solid var(--accent3); margin-bottom: 12px; }
+.pt-missions strong { color: var(--text); display: block; }
+.pt-missions span { display: block; font-size: .82rem; }
+
+/* apparition en cascade à l'ouverture de l'onglet */
+.content > section.active .pt-item { animation: ptIn .6s ease both; }
+.content > section.active .pt-item:nth-child(2) { animation-delay: .1s; }
+.content > section.active .pt-item:nth-child(3) { animation-delay: .2s; }
+.content > section.active .pt-item:nth-child(4) { animation-delay: .3s; }
+@keyframes ptIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .content > section.active .pt-item { animation: none; } }
+
+/* mobile : ligne à gauche, tout empilé */
+@media (max-width: 768px) {
+    .pt::before { left: 23px; }
+    .pt-item, .pt-item.pt-experience { width: 100%; margin-left: 0; padding: 0 0 32px 66px; }
+    .pt-formation .pt-node, .pt-experience .pt-node { left: 0; right: auto; }
+    .pt-formation::before, .pt-experience::before { left: 23px; right: auto; width: 43px; }
+}
