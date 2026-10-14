@@ -226,106 +226,94 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 
 <!-- PARCOURS -->
 <section id="parcours">
-    <div class="container">
-        <h2 class="section-title">Mon Parcours</h2>
+    <h2>Mon Parcours</h2>
 
-        <div class="parcours-content">
-
-            <!-- ── FORMATION (GAUCHE) ── -->
-            <div class="parcours-column slide-in-left">
-                <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
-
-                <div class="timeline">
-
-                    <!-- Bac -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo Blaise1.jpg" alt="Logo Lycée Blaise-Pascal">
-                            </div>
-                            <h4>Bac Général option NSI et physique-chimie</h4>
-                            <p class="timeline-period">2022 - 2024</p>
-                            <p class="timeline-place">Lycée Blaise-Pascal</p>
-                            <p class="timeline-description">Baccalauréat</p>
-                        </div>
-                    </div>
-
-                    <!-- BTS SIO SISR -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo Ukeiwe2.jpg" alt="Logo Dick Ukeiwé">
-                            </div>
-                            <h4>BTS - SIO SISR</h4>
-                            <p class="timeline-period">2025 - 2026</p>
-                            <p class="timeline-place">Lycée Dick Ukeiwé</p>
-                            <p class="timeline-description">Formation spécialisée en Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                        </div>
-                    </div>
-
-                </div><!-- fin .timeline -->
-            </div><!-- fin .parcours-column Formation -->
-
-
-            <!-- ── EXPÉRIENCE (DROITE) ── -->
-            <div class="parcours-column slide-in-right">
-                <h3><i class="fas fa-briefcase"></i> Expérience</h3>
-
-                <div class="timeline">
-
-                    <!-- Stagiaire -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot timeline-dot-exp"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo axains-RS.png" alt="Logo Axians">
-                            </div>
-                            <h4>Stagiaire</h4>
-                            <p class="timeline-period">2025</p>
-                            <p class="timeline-place">Axians</p>
-                            <p class="timeline-description">Découverte du monde professionnel et des métiers de l'informatique</p>
-                            <p class="timeline-description"><strong>Missions :</strong></p>
-                            <p class="timeline-description">- Maintien du SI des écoles</p>
-                            <p class="timeline-description">- Supervision à l'aide de l'outil Zabbix de nos matériels informatiques et ceux des clients</p>
-                            <p class="timeline-description">- Déploiement de téléphone IP avec la plateforme de communication 3CX</p>
-                        </div>
-                    </div>
-
-                    <!-- Alternant technicien infogérance -->
-                    <div class="timeline-item timeline-anim">
-                        <div class="timeline-dot timeline-dot-exp"></div>
-                        <div class="timeline-content timeline-card">
-                            <div class="patrimoine-icon">
-                                <img src="images/logo axains-RS.png" alt="Logo Axians">
-                            </div>
-                           <h4>Alternant technicien infogérance</h4>
-        <p class="timeline-period">2026</p>
-        <p class="timeline-place">Axians</p>
-
-        <h3 class="timeline-description">Missions 1</h3>
-        <h4 class="timeline-description">Infogérance, gestion du parc informatique</h4>
-
-        <h3 class="timeline-description">Missions 2</h3>
-        <h4 class="timeline-description">Administration et supervision des systèmes :</h4>
-        <p class="timeline-description">Objectif : Assurer la disponibilité et la performance des serveurs et équipements réseau</p>
-
-        <h3 class="timeline-description">Missions 3</h3>
-        <h4 class="timeline-description">Gestion des incidents et support technique :</h4>
-        <p class="timeline-description">Objectif : Participer à la résolution des problèmes liés aux infrastructures</p>
-
-        <h3 class="timeline-description">Missions 4</h3>
-        <h4 class="timeline-description">Déploiement et sécurisation des infrastructures :</h4>
-        <p class="timeline-description">Objectif : Contribuer à l'évolution et à la sécurisation du SI</p>
+    <div class="pt-legend">
+        <span class="pt-pill pt-formation"><i class="fas fa-graduation-cap"></i> Formation</span>
+        <span class="pt-pill pt-experience"><i class="fas fa-briefcase"></i> Expérience</span>
     </div>
+
+    <div class="pt">
+
+        <!-- 2022 - 2024 : Bac (Formation, à gauche) -->
+        <div class="pt-item pt-formation">
+            <div class="pt-node"><i class="fas fa-graduation-cap"></i></div>
+            <div class="pt-card">
+                <div class="pt-head">
+                    <img class="pt-logo" src="images/logo Blaise1.jpg" alt="Logo Lycée Blaise-Pascal">
+                    <div>
+                        <span class="pt-period">2022 - 2024</span>
+                        <h4>Bac Général option NSI et physique-chimie</h4>
+                        <p class="pt-place">Lycée Blaise-Pascal</p>
                     </div>
+                </div>
+                <p class="pt-text">Baccalauréat</p>
+            </div>
+        </div>
 
-                </div><!-- fin .timeline -->
-            </div><!-- fin .parcours-column Expérience -->
+        <!-- 2025 : Stage Axians (Expérience, à droite) -->
+        <div class="pt-item pt-experience">
+            <div class="pt-node"><i class="fas fa-briefcase"></i></div>
+            <div class="pt-card">
+                <div class="pt-head">
+                    <img class="pt-logo" src="images/logo axains-RS.png" alt="Logo Axians">
+                    <div>
+                        <span class="pt-period">2025</span>
+                        <h4>Stagiaire</h4>
+                        <p class="pt-place">Axians</p>
+                    </div>
+                </div>
+                <p class="pt-text">Découverte du monde professionnel et des métiers de l'informatique</p>
+                <p class="pt-subtitle">Missions :</p>
+                <ul class="pt-list">
+                    <li>Maintien du SI des écoles</li>
+                    <li>Supervision à l'aide de l'outil Zabbix de nos matériels informatiques et ceux des clients</li>
+                    <li>Déploiement de téléphone IP avec la plateforme de communication 3CX</li>
+                </ul>
+            </div>
+        </div>
 
-        </div><!-- fin .parcours-content -->
-    </div><!-- fin .container -->
+        <!-- 2025 - 2026 : BTS SIO SISR (Formation, à gauche) -->
+        <div class="pt-item pt-formation">
+            <div class="pt-node"><i class="fas fa-graduation-cap"></i></div>
+            <div class="pt-card">
+                <div class="pt-head">
+                    <img class="pt-logo" src="images/logo Ukeiwe2.jpg" alt="Logo Dick Ukeiwé">
+                    <div>
+                        <span class="pt-period">2025 - 2026</span>
+                        <h4>BTS - SIO SISR</h4>
+                        <p class="pt-place">Lycée Dick Ukeiwé</p>
+                    </div>
+                </div>
+                <p class="pt-text">Formation spécialisée en Solutions d'Infrastructure, Systèmes et Réseaux</p>
+            </div>
+        </div>
+
+        <!-- 2026 : Alternance Axians (Expérience, à droite) -->
+        <div class="pt-item pt-experience">
+            <div class="pt-node"><i class="fas fa-briefcase"></i></div>
+            <div class="pt-card">
+                <div class="pt-head">
+                    <img class="pt-logo" src="images/logo axains-RS.png" alt="Logo Axians">
+                    <div>
+                        <span class="pt-period">2026</span>
+                        <h4>Alternant technicien infogérance</h4>
+                        <p class="pt-place">Axians</p>
+                    </div>
+                </div>
+                <ul class="pt-list pt-missions">
+                    <li><strong>Mission 1 : Infogérance, gestion du parc informatique</strong></li>
+                    <li><strong>Mission 2 : Administration et supervision des systèmes</strong>
+                        <span>Objectif : assurer la disponibilité et la performance des serveurs et équipements réseau</span></li>
+                    <li><strong>Mission 3 : Gestion des incidents et support technique</strong>
+                        <span>Objectif : participer à la résolution des problèmes liés aux infrastructures</span></li>
+                    <li><strong>Mission 4 : Déploiement et sécurisation des infrastructures</strong>
+                        <span>Objectif : contribuer à l'évolution et à la sécurisation du SI</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <!-- CERTIFICATIONS -->
