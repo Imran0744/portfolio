@@ -173,3 +173,29 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+
+
+// Navigation par onglets : une seule section affichée à la fois
+(function () {
+    const tabs  = [...document.querySelectorAll('.content > section')];
+    const links = [...document.querySelectorAll('.nav-links a')];
+
+    function showTab(id) {
+        if (!tabs.some(s => s.id === id)) id = 'accueil';
+        tabs.forEach(s => s.classList.toggle('active', s.id === id));
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+        window.scrollTo({ top: 0 });
+        // Le canvas des particules a besoin de se redimensionner quand l'accueil réapparaît
+        if (id === 'accueil') window.dispatchEvent(new Event('resize'));
+    }
+
+    links.forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        history.replaceState(null, '', '#' + id);
+        showTab(id);
+    }));
+
+    window.addEventListener('hashchange', () => showTab(location.hash.slice(1)));
+    showTab(location.hash.slice(1) || 'accueil');
+})();
