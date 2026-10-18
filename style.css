@@ -227,7 +227,7 @@ section h2 {
     color: var(--text);
 }
 
-ssection h2::after {
+section h2::after {
     content: '';
     display: block;
     height: 3px;
