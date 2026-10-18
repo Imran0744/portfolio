@@ -1288,3 +1288,11 @@ body { display: block; }
 .pd-block p, .pd-block li { color: var(--muted); font-size: .88rem; line-height: 1.6; }
 .pd-block ul { padding-left: 18px; }
 .pd-block li { margin-bottom: 4px; }
+
+/* Patrimoine : même cadre d'image que la section Projets (proportions conservées) */
+.patrimoine-media {
+    width: 160px; height: 160px; margin: 0 auto 20px; padding: 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--card2); border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
+}
+.patrimoine-media img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; }
