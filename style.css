@@ -1268,3 +1268,23 @@ body { display: block; }
     .project-card { flex-direction: column; align-items: flex-start; gap: 18px; padding: 22px; }
     .project-media { flex-basis: auto; width: 100%; height: 150px; }
 }
+
+/* Détail des projets (bloc dépliable) */
+.project-details { margin-top: 18px; border-top: 1px solid var(--border); padding-top: 14px; }
+.project-details summary {
+    display: inline-flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;
+    padding: 8px 16px; border-radius: 10px; border: 1px solid var(--accent);
+    color: var(--accent); font-weight: 700; font-size: .8rem; transition: all .3s;
+}
+.project-details summary::-webkit-details-marker { display: none; }
+.project-details summary::after { content: '\25BE'; transition: transform .3s; }
+.project-details summary:hover { background: var(--accent); color: #fff; }
+.project-details[open] summary::after { transform: rotate(180deg); }
+.pd-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+    margin-top: 18px; animation: tabFade .35s ease;
+}
+.pd-block h5 { color: var(--accent); font-size: .85rem; margin-bottom: 8px; }
+.pd-block p, .pd-block li { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.pd-block ul { padding-left: 18px; }
+.pd-block li { margin-bottom: 4px; }
