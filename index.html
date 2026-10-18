@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<canvas id="particles"></canvas>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
@@ -59,7 +60,6 @@
 
     <!-- HERO -->
     <section id="accueil">
-        <div class="hero-bg"><canvas id="particles"></canvas></div>
         <div class="hero-content">
             <h1>Imran Poumalis</h1>
             <p class="neon-welcome">Bienvenue sur mon portfolio</p>
@@ -775,27 +775,43 @@ document.querySelectorAll('a,button,.card,.project-card,.veille-card,.comp-card'
     el.addEventListener('mouseleave',()=>{ ring.style.width='36px'; ring.style.height='36px'; ring.style.borderColor='rgba(0,212,255,.6)'; });
 });
 
-// ── Particles canvas ──
+// ── Particules plein écran : elles jaillissent du centre à chaque changement de section ──
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
-let W,H,particles=[];
-function resize(){ W=canvas.width=canvas.parentElement.offsetWidth; H=canvas.height=canvas.parentElement.offsetHeight; }
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let W=0,H=0,particles=[];
+function burst(){
+    particles=[];
+    if(!W||!H) return;
+    const cx=W/2, cy=H/2+36;               // centre de la zone de contenu (sous la barre du haut)
+    for(let i=0;i<90;i++){
+        const ang=Math.random()*Math.PI*2;
+        const sp=reduceMotion?0:3+Math.random()*19;   // vitesse d'éjection
+        particles.push({
+            x:reduceMotion?Math.random()*W:cx, y:reduceMotion?Math.random()*H:cy,
+            vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.3,   // dérive lente ensuite
+            bx:Math.cos(ang)*sp, by:Math.sin(ang)*sp,
+            r:Math.random()*2+.5, a:Math.random()*.8+.2
+        });
+    }
+}
+function resize(){
+    W=canvas.width=window.innerWidth;
+    H=canvas.height=window.innerHeight;
+    if(!particles.length) burst();
+}
 resize(); window.addEventListener('resize',resize);
-for(let i=0;i<70;i++) particles.push({
-    x:Math.random()*W, y:Math.random()*H,
-    vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.3,
-    r:Math.random()*2+.5, a:Math.random()
-});
+window.addEventListener('tabchange',burst);   // envoyé par script.js à chaque clic sur un onglet
 function drawParticles(){
     ctx.clearRect(0,0,W,H);
     particles.forEach(p=>{
-        p.x+=p.vx; p.y+=p.vy;
-        if(p.x<0||p.x>W) p.vx*=-1;
-        if(p.y<0||p.y>H) p.vy*=-1;
+        p.x+=p.vx+p.bx; p.y+=p.vy+p.by;
+        p.bx*=.975; p.by*=.975;               // l'éjection ralentit puis la dérive prend le relais
+        if(p.x<0||p.x>W){ p.vx*=-1; p.bx*=-1; p.x=Math.max(0,Math.min(W,p.x)); }
+        if(p.y<0||p.y>H){ p.vy*=-1; p.by*=-1; p.y=Math.max(0,Math.min(H,p.y)); }
         ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
         ctx.fillStyle=`rgba(0,212,255,${p.a*.6})`; ctx.fill();
     });
-    // Connect close particles
     particles.forEach((a,i)=>{ particles.slice(i+1).forEach(b=>{
         const d=Math.hypot(a.x-b.x,a.y-b.y);
         if(d<100){ ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);

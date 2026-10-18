@@ -185,8 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tabs.forEach(s => s.classList.toggle('active', s.id === id));
         links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
         window.scrollTo({ top: 0 });
-        // Le canvas des particules a besoin de se redimensionner quand l'accueil réapparaît
-        if (id === 'accueil') window.dispatchEvent(new Event('resize'));
+        // Relance l'effet de particules depuis le centre à chaque section
+        window.dispatchEvent(new Event('tabchange'));
     }
 
     links.forEach(a => a.addEventListener('click', e => {
