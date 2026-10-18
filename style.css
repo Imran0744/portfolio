@@ -220,17 +220,19 @@ section.visible {
 section h2 {
     font-size: 1.6rem;
     font-weight: 800;
-    margin-bottom: 32px;
-    display: inline-block;
+    margin: 0 auto 32px;
+    display: block;
+    width: fit-content;
+    text-align: center;
     color: var(--text);
 }
 
-section h2::after {
+ssection h2::after {
     content: '';
     display: block;
     height: 3px;
     width: 100%;
-    background: linear-gradient(90deg, var(--accent), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
     margin-top: 6px;
 }
 
