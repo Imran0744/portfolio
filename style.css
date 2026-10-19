@@ -1296,3 +1296,13 @@ body { display: block; }
     background: var(--card2); border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
 }
 .patrimoine-media img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; }
+
+/* Veille : impact sociétal des articles et bouton PDF */
+.article-impact { margin-top: 10px; font-size: .85rem; color: var(--muted); }
+.article-impact strong { color: var(--accent); }
+.article-source { font-size: .75rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+#veilles .present { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+/* Veille : 2 colonnes pour les diapositives à 4 articles */
+@media (min-width: 900px) { #veilles .articles-list { grid-template-columns: repeat(2, 1fr); } }
+#veilles .article-item h4 { margin-bottom: 8px; }
