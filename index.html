@@ -375,81 +375,31 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 <!-- CERTIFICATIONS -->
 <section id="certifications">
     <h2>Certifications</h2>
-    <p class="cert-subtitle">Mes formations et attestations obtenues</p>
+    <p class="cert-subtitle">Mes formations et attestations, classées par domaine</p>
 
     <div class="cert-grid">
-        <article class="cert-card">
-            <button class="cert-thumb" type="button" aria-label="Voir le détail : Support et sécurité des réseaux">
-                <img src="images/screen support.png" alt="Certificat Support et sécurité des réseaux">
-            </button>
+        <article class="cert-card cert-domain">
+            <div class="cert-domain-media"><img src="images/icone-netacad.svg" alt="Cisco Networking Academy"></div>
             <div class="cert-body">
-                <span class="cert-date">2025</span>
-                <h3>Support et sécurité des réseaux</h3>
-                <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
-                <button class="cert-more" type="button">En savoir plus <i class="fas fa-arrow-right"></i></button>
+                <span class="cert-date">4 certifications</span>
+                <h3>Cisco Networking Academy</h3>
+                <p>Réseaux et cybersécurité : bases des réseaux, support et sécurité, menaces et sécurité offensive.</p>
+                <button class="cert-more" type="button" data-panel="cert-panel-cisco">En savoir plus <i class="fas fa-arrow-right"></i></button>
             </div>
         </article>
-
-        <article class="cert-card">
-            <button class="cert-thumb" type="button" aria-label="Voir le détail : Notions base sur les réseaux">
-                <img src="images/screen notions.png" alt="Certificat Notions base sur les réseaux">
-            </button>
+        <article class="cert-card cert-domain">
+            <div class="cert-domain-media"><img src="images/icone-pix.svg" alt="PIX – Compétences numériques"></div>
             <div class="cert-body">
-                <span class="cert-date">2026</span>
-                <h3>Notions base sur les réseaux</h3>
-                <p>Commencez à apprendre les bases des réseaux informatiques et découvrez le fonctionnement des réseaux.</p>
-                <button class="cert-more" type="button">En savoir plus <i class="fas fa-arrow-right"></i></button>
-            </div>
-        </article>
-
-        <article class="cert-card">
-            <button class="cert-thumb" type="button" aria-label="Voir le détail : Menaces pour la cybersécurité">
-                <img src="images/certif cybersecu.png" alt="Certificat Menaces pour la cybersécurité">
-            </button>
-            <div class="cert-body">
-                <span class="cert-date">2025</span>
-                <h3>Menaces pour la cybersécurité</h3>
-                <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
-                <button class="cert-more" type="button">En savoir plus <i class="fas fa-arrow-right"></i></button>
-            </div>
-        </article>
-
-        <article class="cert-card">
-            <button class="cert-thumb" type="button" aria-label="Voir le détail : Hackers éthiques">
-                <img src="images/certif hacker.png" alt="Certificat Hackers éthiques">
-            </button>
-            <div class="cert-body">
-                <span class="cert-date">2026</span>
-                <h3>Hackers éthiques</h3>
-                <p>Apprenez l'art de la sécurité offensive pour découvrir les cybermenaces et les vulnérabilités avant les cybercriminels.</p>
-                <button class="cert-more" type="button">En savoir plus <i class="fas fa-arrow-right"></i></button>
-            </div>
-        </article>
-
-        <article class="cert-card">
-            <button class="cert-thumb" type="button" aria-label="Voir le détail : PIX">
-                <img src="images/certif pix.png" alt="Certificat PIX">
-            </button>
-            <div class="cert-body">
-                <span class="cert-date">2026</span>
-                <h3>PIX</h3>
-                <p>Certification numérique des compétences</p>
-                <button class="cert-more" type="button">En savoir plus <i class="fas fa-arrow-right"></i></button>
+                <span class="cert-date">1 certification</span>
+                <h3>PIX – Compétences numériques</h3>
+                <p>Certification officielle des compétences numériques, évaluées sur cinq domaines : informations et données, communication, création de contenu, protection et sécurité, environnement numérique.</p>
+                <button class="cert-more" type="button" data-panel="cert-panel-pix">En savoir plus <i class="fas fa-arrow-right"></i></button>
             </div>
         </article>
     </div>
 </section>
 
-<!-- FENÊTRE DÉTAIL CERTIFICATION -->
-<div id="cert-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
-    <div class="cert-modal-content">
-        <button class="cert-modal-close" id="cert-modal-close" type="button" aria-label="Fermer">&times;</button>
-        <img id="cert-modal-img" src="" alt="">
-        <span class="cert-date" id="cert-modal-date"></span>
-        <h3 id="cert-modal-title"></h3>
-        <p id="cert-modal-desc"></p>
-    </div>
-</div>
+
 
 <!-- PROJETS -->
 <section id="projets">
@@ -910,6 +860,136 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
     </section>
 
 </main>
+
+<!-- PANNEAUX CERTIFICATIONS (arborescence par domaine) -->
+<div id="cert-panel-cisco" class="cert-panel" role="dialog" aria-modal="true" aria-labelledby="cert-panel-cisco-title">
+    <div class="cert-panel-inner">
+        <button class="cert-panel-close" type="button" aria-label="Fermer">&times;</button>
+        <div class="cert-panel-head">
+            <img src="images/icone-netacad.svg" alt="">
+            <div>
+                <span class="cert-date">4 certifications</span>
+                <h3 id="cert-panel-cisco-title">Cisco Networking Academy</h3>
+                <p>Parcours en ligne sur les réseaux et la cybersécurité, classés par thème.</p>
+            </div>
+        </div>
+        <ul class="tree">
+            <li class="tree-root">
+                <span class="tree-label"><i class="fas fa-sitemap"></i> Cisco Networking Academy</span>
+                <ul>
+                    <li class="tree-branch">
+                        <details open>
+                            <summary><i class="fas fa-network-wired"></i> Réseaux <span class="tree-count">2</span></summary>
+                            <ul>
+                            <li class="tree-leaf">
+                                <div class="leaf-card">
+                                    <img class="leaf-thumb" src="images/screen notions.png" alt="Certificat Notions de base sur les réseaux">
+                                    <div class="leaf-body">
+                                        <span class="cert-date">Août 2025</span>
+                                        <h4>Notions de base sur les réseaux</h4>
+                                        <p>Commencez à apprendre les bases des réseaux informatiques et découvrez le fonctionnement des réseaux.</p>
+                                        <button class="cert-more leaf-view" type="button">Voir le certificat <i class="fas fa-expand"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tree-leaf">
+                                <div class="leaf-card">
+                                    <img class="leaf-thumb" src="images/screen support.png" alt="Certificat Support et sécurité des réseaux">
+                                    <div class="leaf-body">
+                                        <span class="cert-date">Mai 2026</span>
+                                        <h4>Support et sécurité des réseaux</h4>
+                                        <p>Développez vos compétences en matière de dépannage réseau et de contrôle d'accès des utilisateurs pour commencer votre carrière dans la technologie.</p>
+                                        <button class="cert-more leaf-view" type="button">Voir le certificat <i class="fas fa-expand"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="tree-branch">
+                        <details open>
+                            <summary><i class="fas fa-shield-halved"></i> Cybersécurité <span class="tree-count">2</span></summary>
+                            <ul>
+                            <li class="tree-leaf">
+                                <div class="leaf-card">
+                                    <img class="leaf-thumb" src="images/certif cybersecu.png" alt="Certificat Menaces pour la cybersécurité">
+                                    <div class="leaf-body">
+                                        <span class="cert-date">2025</span>
+                                        <h4>Menaces pour la cybersécurité</h4>
+                                        <p>Comprendre les menaces, les vulnérabilités et les attaques qui visent les systèmes d’information.</p>
+                                        <button class="cert-more leaf-view" type="button">Voir le certificat <i class="fas fa-expand"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tree-leaf">
+                                <div class="leaf-card">
+                                    <img class="leaf-thumb" src="images/certif hacker.png" alt="Certificat Hackers éthiques">
+                                    <div class="leaf-body">
+                                        <span class="cert-date">2026</span>
+                                        <h4>Hackers éthiques</h4>
+                                        <p>Apprenez l'art de la sécurité offensive pour découvrir les cybermenaces et les vulnérabilités avant les cybercriminels.</p>
+                                        <button class="cert-more leaf-view" type="button">Voir le certificat <i class="fas fa-expand"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="cert-panel-pix" class="cert-panel" role="dialog" aria-modal="true" aria-labelledby="cert-panel-pix-title">
+    <div class="cert-panel-inner">
+        <button class="cert-panel-close" type="button" aria-label="Fermer">&times;</button>
+        <div class="cert-panel-head">
+            <img src="images/icone-pix.svg" alt="">
+            <div>
+                <span class="cert-date">1 certification</span>
+                <h3 id="cert-panel-pix-title">PIX – Compétences numériques</h3>
+                <p>Certification officielle des compétences numériques.</p>
+            </div>
+        </div>
+        <ul class="tree">
+            <li class="tree-root">
+                <span class="tree-label"><i class="fas fa-sitemap"></i> PIX – Compétences numériques</span>
+                <ul>
+                    <li class="tree-branch">
+                        <details open>
+                            <summary><i class="fas fa-laptop"></i> Compétences numériques <span class="tree-count">1</span></summary>
+                            <ul>
+                            <li class="tree-leaf">
+                                <div class="leaf-card">
+                                    <img class="leaf-thumb" src="images/certif pix.png" alt="Certification PIX">
+                                    <div class="leaf-body">
+                                        <span class="cert-date">2026</span>
+                                        <h4>Certification PIX</h4>
+                                        <p>Certification des compétences numériques.</p>
+                                        <button class="cert-more leaf-view" type="button">Voir le certificat <i class="fas fa-expand"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- FENÊTRE DÉTAIL CERTIFICATION -->
+<div id="cert-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="cert-modal-content">
+        <button class="cert-modal-close" id="cert-modal-close" type="button" aria-label="Fermer">&times;</button>
+        <img id="cert-modal-img" src="" alt="">
+        <span class="cert-date" id="cert-modal-date"></span>
+        <h3 id="cert-modal-title"></h3>
+        <p id="cert-modal-desc"></p>
+    </div>
+</div>
+
 
 <script>
 // ── Custom cursor ──

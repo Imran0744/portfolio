@@ -207,31 +207,52 @@ document.addEventListener("DOMContentLoaded", function () {
     showTab(location.hash.slice(1) || 'accueil');
 });
 
-// Certifications : fenêtre "En savoir plus"
+// Certifications : cartes par domaine, panneau en arborescence et visionneuse du certificat
 document.addEventListener("DOMContentLoaded", function () {
-    const certModal = document.getElementById('cert-modal');
-    if (!certModal) return;
-    const mImg = document.getElementById('cert-modal-img');
-    const mDate = document.getElementById('cert-modal-date');
-    const mTitle = document.getElementById('cert-modal-title');
-    const mDesc = document.getElementById('cert-modal-desc');
+    const viewer = document.getElementById('cert-modal');
+    if (!viewer) return;
+    const vImg = document.getElementById('cert-modal-img');
+    const vDate = document.getElementById('cert-modal-date');
+    const vTitle = document.getElementById('cert-modal-title');
+    const vDesc = document.getElementById('cert-modal-desc');
 
-    function openCert(card) {
-        const img = card.querySelector('.cert-thumb img');
-        mImg.src = img.getAttribute('src');
-        mImg.alt = img.alt;
-        mDate.textContent = card.querySelector('.cert-date').textContent;
-        mTitle.textContent = card.querySelector('h3').textContent;
-        mDesc.textContent = card.querySelector('.cert-body p').textContent;
-        certModal.style.display = 'flex';
+    function openPanel(id) {
+        const p = document.getElementById(id);
+        if (!p) return;
+        p.classList.add('open');
+        p.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
     }
-    function closeCert() { certModal.style.display = 'none'; }
+    function closePanels() {
+        document.querySelectorAll('.cert-panel.open').forEach(p => p.classList.remove('open'));
+        document.body.style.overflow = '';
+    }
+    function openViewer(leaf) {
+        const img = leaf.querySelector('.leaf-thumb');
+        vImg.src = img.getAttribute('src');
+        vImg.alt = img.alt;
+        vDate.textContent = leaf.querySelector('.cert-date').textContent;
+        vTitle.textContent = leaf.querySelector('h4').textContent;
+        vDesc.textContent = leaf.querySelector('.leaf-body p').textContent;
+        viewer.style.display = 'flex';
+    }
+    function closeViewer() { viewer.style.display = 'none'; }
 
-    document.querySelectorAll('.cert-card').forEach(card => {
-        card.querySelectorAll('.cert-thumb, .cert-more').forEach(btn =>
-            btn.addEventListener('click', () => openCert(card)));
+    document.querySelectorAll('[data-panel]').forEach(btn =>
+        btn.addEventListener('click', () => openPanel(btn.dataset.panel)));
+    document.querySelectorAll('.cert-panel').forEach(p => {
+        p.addEventListener('click', e => { if (e.target === p) closePanels(); });
+        p.querySelector('.cert-panel-close').addEventListener('click', closePanels);
     });
-    document.getElementById('cert-modal-close').addEventListener('click', closeCert);
-    certModal.addEventListener('click', e => { if (e.target === certModal) closeCert(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCert(); });
+    document.querySelectorAll('.tree-leaf').forEach(leaf =>
+        leaf.querySelectorAll('.leaf-view, .leaf-thumb').forEach(el =>
+            el.addEventListener('click', () => openViewer(leaf))));
+
+    document.getElementById('cert-modal-close').addEventListener('click', closeViewer);
+    viewer.addEventListener('click', e => { if (e.target === viewer) closeViewer(); });
+    document.addEventListener('keydown', e => {
+        if (e.key !== 'Escape') return;
+        if (viewer.style.display === 'flex') closeViewer(); else closePanels();
+    });
+    window.addEventListener('tabchange', closePanels);
 });

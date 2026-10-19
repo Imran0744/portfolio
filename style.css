@@ -1446,3 +1446,77 @@ body { display: block; }
     .hero-stats span { font-size: .65rem; }
     .btn-primary, .btn-secondary { padding: 12px 20px; font-size: .85rem; }
 }
+
+/* ============================================================
+   CERTIFICATIONS : cartes par domaine + panneau en arborescence
+   ============================================================ */
+.cert-domain-media { aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background: var(--card2); }
+.cert-domain-media img { width: 96px; height: 96px; border-radius: 22px; }
+
+.cert-panel {
+    display: none; position: fixed; inset: 0; z-index: 900; overflow-y: auto;
+    background: rgba(0, 0, 0, .65); padding: 40px 20px;
+}
+.cert-panel.open { display: block; animation: tabFade .3s ease; }
+.cert-panel-inner {
+    position: relative; max-width: 920px; margin: 0 auto; padding: 30px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 24px;
+}
+.cert-panel-close {
+    position: absolute; top: 14px; right: 16px; width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    font-size: 1.5rem; line-height: 1; cursor: pointer;
+}
+.cert-panel-close:hover { background: var(--accent); color: #fff; }
+.cert-panel-head { display: flex; align-items: center; gap: 18px; margin: 0 40px 24px 0; }
+.cert-panel-head img { width: 72px; height: 72px; border-radius: 18px; flex-shrink: 0; }
+.cert-panel-head h3 { font-size: 1.4rem; margin: 6px 0 4px; }
+.cert-panel-head p { color: var(--muted); font-size: .9rem; }
+
+/* arborescence */
+.tree, .tree ul { list-style: none; margin: 0; padding: 0; }
+.tree { --line: color-mix(in srgb, var(--accent) 45%, transparent); }
+.tree-label {
+    display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 800;
+}
+.tree-root > ul { margin-left: 22px; }
+.tree ul > li { position: relative; padding: 14px 0 0 34px; }
+.tree ul > li::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; border-left: 2px solid var(--line); }
+.tree ul > li:last-child::before { height: 34px; }
+.tree ul > li::after { content: ''; position: absolute; left: 0; top: 34px; width: 26px; border-top: 2px solid var(--line); }
+.tree-branch > details > ul { margin-left: 18px; }
+.tree-branch summary {
+    display: inline-flex; align-items: center; gap: 10px; cursor: pointer; list-style: none;
+    padding: 8px 16px; border-radius: 12px; background: var(--card2); border: 1px solid var(--border);
+    font-weight: 700; color: var(--text);
+}
+.tree-branch summary::-webkit-details-marker { display: none; }
+.tree-branch summary i { color: var(--accent); }
+.tree-branch summary::after { content: '\25BE'; color: var(--muted); transition: transform .3s; }
+.tree-branch details:not([open]) summary::after { transform: rotate(-90deg); }
+.tree-count { padding: 1px 9px; border-radius: 999px; background: rgba(14, 165, 233, .15); color: var(--accent); font-size: .75rem; }
+
+.leaf-card {
+    display: flex; gap: 18px; align-items: center; padding: 14px; border-radius: 16px;
+    background: var(--card2); border: 1px solid var(--border); transition: border-color .3s, transform .3s;
+}
+.leaf-card:hover { border-color: var(--accent); transform: translateX(3px); }
+.leaf-thumb {
+    width: 170px; height: 106px; flex-shrink: 0; object-fit: cover; object-position: top;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--card); cursor: zoom-in;
+}
+.leaf-body h4 { font-size: 1rem; margin: 6px 0 4px; }
+.leaf-body p { color: var(--muted); font-size: .85rem; line-height: 1.5; margin-bottom: 10px; display: block; -webkit-line-clamp: unset; overflow: visible; }
+
+#cert-modal { z-index: 1000; }
+
+@media (max-width: 640px) {
+    .cert-panel { padding: 16px 10px; }
+    .cert-panel-inner { padding: 22px 16px; }
+    .cert-panel-head { flex-direction: column; align-items: flex-start; }
+    .tree ul > li { padding-left: 22px; }
+    .tree ul > li::after { width: 16px; }
+    .leaf-card { flex-direction: column; align-items: flex-start; }
+    .leaf-thumb { width: 100%; height: 150px; }
+}
