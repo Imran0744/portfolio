@@ -207,7 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
     showTab(location.hash.slice(1) || 'accueil');
 });
 
-/// Certifications : fenêtre unique listant toutes les certifications
+// ============================================================
+// CERTIFICATIONS : Fenêtre globale avec toutes les certifications
+// ============================================================
 document.addEventListener("DOMContentLoaded", function () {
     const certPanel = document.getElementById('all-certs-panel');
     if (!certPanel) return;
@@ -228,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     openBtns.forEach(btn => btn.addEventListener('click', openPanel));
     
     // Fermer avec la croix
-    closeBtn.addEventListener('click', closePanel);
+    if (closeBtn) closeBtn.addEventListener('click', closePanel);
     
     // Fermer en cliquant à l'extérieur de la fenêtre
     certPanel.addEventListener('click', e => {
