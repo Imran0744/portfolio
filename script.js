@@ -208,37 +208,65 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ============================================================
-// CERTIFICATIONS : Fenêtre globale avec toutes les certifications
+// CERTIFICATIONS : Panneaux et visionneuse
 // ============================================================
 document.addEventListener("DOMContentLoaded", function () {
-    const certPanel = document.getElementById('all-certs-panel');
-    if (!certPanel) return;
+    const viewer = document.getElementById('cert-modal');
     
-    const openBtns = document.querySelectorAll('.cert-more');
-    const closeBtn = document.getElementById('all-certs-close');
-
-    function openPanel() {
-        certPanel.classList.add('open');
-        document.body.style.overflow = 'hidden'; // Empêche le défilement de l'arrière-plan
+    // Gestion des fenêtres (Panneaux)
+    function openPanel(id) {
+        const p = document.getElementById(id);
+        if (!p) return;
+        p.classList.add('open');
+        p.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
     }
-    function closePanel() {
-        certPanel.classList.remove('open');
+    
+    function closePanels() {
+        document.querySelectorAll('.cert-panel.open').forEach(p => p.classList.remove('open'));
         document.body.style.overflow = '';
     }
 
-    // Ouvrir au clic sur n'importe quel bouton "En savoir plus"
-    openBtns.forEach(btn => btn.addEventListener('click', openPanel));
-    
-    // Fermer avec la croix
-    if (closeBtn) closeBtn.addEventListener('click', closePanel);
-    
-    // Fermer en cliquant à l'extérieur de la fenêtre
-    certPanel.addEventListener('click', e => {
-        if (e.target === certPanel) closePanel();
+    document.querySelectorAll('[data-panel]').forEach(btn =>
+        btn.addEventListener('click', () => openPanel(btn.dataset.panel)));
+        
+    document.querySelectorAll('.cert-panel').forEach(p => {
+        p.addEventListener('click', e => { if (e.target === p) closePanels(); });
+        const closeBtn = p.querySelector('.cert-panel-close');
+        if (closeBtn) closeBtn.addEventListener('click', closePanels);
     });
+
+    // Gestion de la visionneuse (Zoom sur l'image)
+    if (viewer) {
+        const vImg = document.getElementById('cert-modal-img');
+        const vDate = document.getElementById('cert-modal-date');
+        const vTitle = document.getElementById('cert-modal-title');
+        const vDesc = document.getElementById('cert-modal-desc');
+
+        function openViewer(leaf) {
+            const img = leaf.querySelector('.leaf-thumb');
+            vImg.src = img.getAttribute('src');
+            vImg.alt = img.alt;
+            vDate.textContent = leaf.querySelector('.cert-date').textContent;
+            vTitle.textContent = leaf.querySelector('h4').textContent;
+            vDesc.textContent = leaf.querySelector('.leaf-body p').textContent;
+            viewer.style.display = 'flex';
+        }
+        
+        function closeViewer() { viewer.style.display = 'none'; }
+
+        document.querySelectorAll('.tree-leaf').forEach(leaf =>
+            leaf.querySelectorAll('.leaf-view, .leaf-thumb').forEach(el =>
+                el.addEventListener('click', () => openViewer(leaf))));
+
+        document.getElementById('cert-modal-close').addEventListener('click', closeViewer);
+        viewer.addEventListener('click', e => { if (e.target === viewer) closeViewer(); });
+        
+        document.addEventListener('keydown', e => {
+            if (e.key !== 'Escape') return;
+            if (viewer.style.display === 'flex') closeViewer(); else closePanels();
+        });
+    }
     
-    // Fermer avec la touche Echap
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && certPanel.classList.contains('open')) closePanel();
-    });
+    window.addEventListener('tabchange', closePanels);
 });
