@@ -589,16 +589,14 @@ section h2::after {
     background: var(--accent);
 }
 
-/* ── CORRECTION 1 : position relative indispensable ── */
 .timeline-item {
-    position: relative;   /* permet au dot de se positionner par rapport à l'item */
+    position: relative;
     margin-bottom: 25px;
 }
 
-/* ── CORRECTION 2 : dot repositionné sur la ligne ── */
 .timeline-dot {
     position: absolute;
-    left: -28px;          /* centre le dot sur la ligne ::before (left:8px - padding:30px + moitié dot:7px) */
+    left: -28px;
     top: 10px;
     width: 14px;
     height: 14px;
@@ -606,7 +604,7 @@ section h2::after {
     background: var(--accent);
     border: 3px solid var(--card);
     box-shadow: 0 0 0 2px var(--accent);
-    z-index: 1;           /* passe au-dessus de la ligne verticale */
+    z-index: 1;
 }
 
 .timeline-content {
@@ -1001,7 +999,6 @@ form button:hover {
 
 /* ============================================================
    NAVBAR HORIZONTALE + SECTIONS PAR ONGLET
-   À charger APRÈS style.css
    ============================================================ */
 :root { --nav-h: 72px; }
 
@@ -1098,9 +1095,8 @@ body { display: block; }
     .content { padding: calc(var(--nav-h) + 16px) 18px 40px; }
 }
 
-
 /* ============================================================
-   PARCOURS : timeline centrale (Formation à gauche, Expérience à droite)
+   PARCOURS : timeline centrale
    ============================================================ */
 .pt-legend { display: flex; justify-content: center; gap: 14px; margin-bottom: 36px; }
 .pt-pill {
@@ -1121,7 +1117,6 @@ body { display: block; }
 .pt-item { position: relative; width: 50%; padding: 0 64px 44px 0; }
 .pt-item.pt-experience { margin-left: 50%; padding: 0 0 44px 64px; }
 
-/* pastille sur la ligne */
 .pt-node {
     position: absolute; top: 14px; width: 46px; height: 46px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
@@ -1131,7 +1126,6 @@ body { display: block; }
 .pt-formation .pt-node { right: -23px; background: var(--accent); }
 .pt-experience .pt-node { left: -23px; background: var(--accent3); box-shadow: 0 0 0 2px var(--accent3); }
 
-/* trait de liaison entre la pastille et la carte */
 .pt-item::before { content: ''; position: absolute; top: 35px; height: 3px; width: 42px; z-index: 1; }
 .pt-formation::before { right: 23px; background: var(--accent); }
 .pt-experience::before { left: 23px; background: var(--accent3); }
@@ -1165,7 +1159,6 @@ body { display: block; }
 .pt-missions strong { color: var(--text); display: block; }
 .pt-missions span { display: block; font-size: .82rem; }
 
-/* apparition en cascade à l'ouverture de l'onglet */
 .content > section.active .pt-item { animation: ptIn .6s ease both; }
 .content > section.active .pt-item:nth-child(2) { animation-delay: .1s; }
 .content > section.active .pt-item:nth-child(3) { animation-delay: .2s; }
@@ -1173,14 +1166,12 @@ body { display: block; }
 @keyframes ptIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .content > section.active .pt-item { animation: none; } }
 
-/* mobile : ligne à gauche, tout empilé */
 @media (max-width: 768px) {
     .pt::before { left: 23px; }
     .pt-item, .pt-item.pt-experience { width: 100%; margin-left: 0; padding: 0 0 32px 66px; }
     .pt-formation .pt-node, .pt-experience .pt-node { left: 0; right: auto; }
     .pt-formation::before, .pt-experience::before { left: 23px; right: auto; width: 43px; }
 }
-
 
 /* ============================================================
    CERTIFICATIONS : cartes avec image + "En savoir plus"
@@ -1220,7 +1211,6 @@ body { display: block; }
 }
 .cert-more:hover { background: var(--accent); color: #fff; gap: 12px; }
 
-/* fenêtre de détail */
 .cert-modal-content {
     position: relative; width: 92%; max-width: 760px; max-height: 90vh; overflow-y: auto;
     background: var(--card); border: 1px solid var(--border); border-radius: 22px;
@@ -1237,7 +1227,7 @@ body { display: block; }
 .cert-modal-close:hover { background: var(--accent); color: #fff; }
 
 /* ============================================================
-   PARTICULES : fond plein écran derrière toutes les sections
+   PARTICULES
    ============================================================ */
 #particles { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 .content { position: relative; z-index: 1; }
@@ -1249,7 +1239,6 @@ body { display: block; }
 
 .project-card { display: flex; align-items: center; gap: 28px; padding: 26px 30px; }
 
-/* cadre fixe : l'image garde ses proportions (contain), jamais étirée ni rognée */
 .project-media {
     flex: 0 0 160px; width: 160px; height: 160px; padding: 12px;
     display: flex; align-items: center; justify-content: center;
@@ -1263,13 +1252,11 @@ body { display: block; }
 .project-body p { color: var(--muted); font-size: .92rem; line-height: 1.6; }
 .project-list { padding-left: 18px; margin-top: 6px; color: var(--muted); font-size: .88rem; line-height: 1.6; }
 
-/* mobile : l'image passe au-dessus du texte */
 @media (max-width: 640px) {
     .project-card { flex-direction: column; align-items: flex-start; gap: 18px; padding: 22px; }
     .project-media { flex-basis: auto; width: 100%; height: 150px; }
 }
 
-/* Détail des projets (bloc dépliable) */
 .project-details { margin-top: 18px; border-top: 1px solid var(--border); padding-top: 14px; }
 .project-details summary {
     display: inline-flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;
@@ -1289,7 +1276,6 @@ body { display: block; }
 .pd-block ul { padding-left: 18px; }
 .pd-block li { margin-bottom: 4px; }
 
-/* Patrimoine : même cadre d'image que la section Projets (proportions conservées) */
 .patrimoine-media {
     width: 160px; height: 160px; margin: 0 auto 20px; padding: 12px;
     display: flex; align-items: center; justify-content: center;
@@ -1297,6 +1283,166 @@ body { display: block; }
 }
 .patrimoine-media img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; }
 
-/* Veille */
 .article-source { font-size: .75rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
 #veilles .present { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+/* ============================================================
+   ACCUEIL : améliorations (photo, CTA, stats, tags, hint)
+   ============================================================ */
+
+/* Photo de profil ronde */
+.hero-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 40px rgba(14, 165, 233, .35);
+    margin-bottom: 22px;
+    animation: heroIn 1s ease both;
+}
+
+/* Animation d'apparition du nom et de l'avatar */
+#accueil h1 {
+    animation: heroIn 1s ease both;
+}
+@keyframes heroIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-avatar, #accueil h1 { animation: none; }
+}
+
+/* Sous-titre : rôle + description */
+.hero-role {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 10px;
+}
+.hero-subtitle {
+    max-width: 640px;
+    margin: 14px auto 0;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: .95rem;
+}
+.hero-subtitle strong { color: var(--text); }
+
+/* Tags avec icônes */
+.hero-tags { margin-top: 26px; }
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: all .3s;
+}
+.hero-tag i {
+    color: var(--accent);
+    font-size: .8rem;
+}
+.hero-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Boutons d'action */
+.hero-cta {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(14, 165, 233, .35);
+}
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--card);
+}
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* Chiffres clés */
+.hero-stats {
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+    margin-top: 48px;
+    flex-wrap: wrap;
+}
+.hero-stats div { text-align: center; }
+.hero-stats strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-stats span {
+    font-size: .72rem;
+    color: var(--muted);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* Petit indicateur en bas */
+.hero-hint {
+    margin-top: 56px;
+    color: var(--muted);
+    font-size: .75rem;
+    letter-spacing: .1em;
+    animation: hintPulse 2s ease-in-out infinite;
+}
+.hero-hint i { margin-left: 6px; color: var(--accent); }
+@keyframes hintPulse {
+    0%, 100% { opacity: .5; transform: translateY(0); }
+    50%      { opacity: 1;  transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-hint { animation: none; }
+}
+
+/* Responsive : accueil sur mobile */
+@media (max-width: 768px) {
+    #accueil.active {
+        min-height: auto;
+        padding: 48px 0 32px;
+    }
+    .hero-avatar { width: 100px; height: 100px; }
+    .hero-subtitle { font-size: .9rem; padding: 0 8px; }
+    .hero-stats { gap: 26px; margin-top: 36px; }
+    .hero-stats strong { font-size: 1.6rem; }
+    .hero-stats span { font-size: .65rem; }
+    .btn-primary, .btn-secondary { padding: 12px 20px; font-size: .85rem; }
+}

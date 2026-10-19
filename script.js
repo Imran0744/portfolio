@@ -174,9 +174,9 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-
-
-// Navigation par onglets : une seule section affichée à la fois
+// ============================================================
+// NAVIGATION PAR ONGLETS
+// ============================================================
 document.addEventListener("DOMContentLoaded", function () {
     const tabs  = [...document.querySelectorAll('.content > section')];
     const links = [...document.querySelectorAll('.nav-links a')];
@@ -190,17 +190,22 @@ document.addEventListener("DOMContentLoaded", function () {
         window.dispatchEvent(new Event('tabchange'));
     }
 
-    links.forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        const id = a.getAttribute('href').slice(1);
-        history.replaceState(null, '', '#' + id);
-        showTab(id);
-    }));
+    // Tous les liens internes (sidebar + boutons "Voir mes projets", etc.)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = a.getAttribute('href');
+            if (target.length <= 1) return;          // ignore les "#" seuls
+            e.preventDefault();
+            const id = target.slice(1);
+            history.replaceState(null, '', '#' + id);
+            showTab(id);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
 
     window.addEventListener('hashchange', () => showTab(location.hash.slice(1)));
     showTab(location.hash.slice(1) || 'accueil');
 });
-
 
 // Certifications : fenêtre "En savoir plus"
 document.addEventListener("DOMContentLoaded", function () {
