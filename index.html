@@ -355,7 +355,7 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 <!-- CERTIFICATIONS -->
 <section id="certifications">
     <h2>Certifications</h2>
-    <p class="cert-subtitle">Mes formations et attestations, classées par domaine</p>
+    <p class="cert-subtitle">Mes formations et attestations</p>
 
     <div class="cert-grid">
         <article class="cert-card cert-domain">
@@ -479,6 +479,66 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                                 <li>Inventaire et cartographie d'un SI</li>
                                 <li>Analyse de risques, VLAN, ACL, documentation technique</li>
                             </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-media">
+                <img src="images/icone-fil-rouge.svg" alt="Entreprise fil rouge">
+            </div>
+            <div class="project-body">
+                <h3>Entreprise Fil Rouge</h3>
+                <h4>Projet annuel SISR · TechForm NC</h4>
+                <p>Projet de l'année du BTS SIO SISR (session 2026, Nouvelle-Calédonie) : une même entreprise, TechForm NC, sert de fil conducteur. Les 18 étudiants SISR, répartis en 6 équipes de 3, construisent et sécurisent ensemble son système d'information, la cybersécurité étant le principe directeur de chaque décision. Je fais partie de l'équipe 1, Audit &amp; Inventaire.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Cybersécurité</span>
+                    <span class="project-tag">VLAN</span>
+                    <span class="project-tag">SIEM / IDS</span>
+                    <span class="project-tag">RGPD</span>
+                </div>
+                <details class="project-details">
+                    <summary>Voir le détail du projet</summary>
+                    <div class="pd-grid">
+                        <div class="pd-block">
+                            <h5>Les 6 équipes et leurs missions</h5>
+                            <ul>
+                                <li><strong>Équipe 1</strong> : audit et inventaire du SI (cartographie), mon équipe</li>
+                                <li><strong>Équipe 2</strong> : architecture et segmentation (VLAN, AD, DNS)</li>
+                                <li><strong>Équipe 3</strong> : filtrage et pare-feu</li>
+                                <li><strong>Équipe 4</strong> : détection réseau (IDS)</li>
+                                <li><strong>Équipe 5</strong> : supervision (SIEM / HIDS)</li>
+                                <li><strong>Équipe 6</strong> : gestion d'incident (forensique, archivage)</li>
+                            </ul>
+                        </div>
+                        <div class="pd-block">
+                            <h5>Livrables attendus</h5>
+                            <ul>
+                                <li>Mission 1 : rapport d'audit et cartographie du SI</li>
+                                <li>Mission 2 : dossier d'architecture argumenté</li>
+                                <li>Mission 3 : politique de sécurité réseau et configuration du pare-feu</li>
+                                <li>Mission 4 : rapport d'intégration de l'IDS et analyse d'événements</li>
+                                <li>Mission 5 : architecture SIEM, politique de logs et tableaux de bord</li>
+                                <li>Mission 6 : rapport d'incident et procédures d'investigation</li>
+                            </ul>
+                        </div>
+                        <div class="pd-block">
+                            <h5>Circulation des journaux</h5>
+                            <p>Les pare-feu, l'IDS et les agents des postes envoient leurs journaux au SIEM central (syslog, agents). Le SIEM alimente ensuite une archive froide longue durée, avec contrôle d'intégrité (sha256). L'équipe 6 la consulte en lecture seule pour mener l'investigation.</p>
+                        </div>
+                        <div class="pd-block">
+                            <h5>Coordination entre équipes</h5>
+                            <ul>
+                                <li>Équipe 2 vers équipe 3 : flux autorisés entre VLAN</li>
+                                <li>Équipes 3 et 4 vers équipe 5 : envoi des journaux du pare-feu et de l'IDS au SIEM</li>
+                                <li>Équipes 5 et 6 : archivage et politique de conservation des journaux (RGPD)</li>
+                            </ul>
+                        </div>
+                        <div class="pd-block">
+                            <h5>Évaluation et objectif</h5>
+                            <p>Cohérence technique de l'architecture, justification des choix de cybersécurité, lien avec la réglementation (RGPD), qualité des livrables et posture professionnelle. Chaque choix doit pouvoir être défendu devant le jury de l'épreuve E5, dans l'esprit d'un administrateur responsable.</p>
                         </div>
                     </div>
                 </details>
