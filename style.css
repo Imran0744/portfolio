@@ -1503,8 +1503,17 @@ body { display: block; }
 }
 .leaf-card:hover { border-color: var(--accent); transform: translateX(3px); }
 .leaf-thumb {
-    width: 170px; height: 106px; flex-shrink: 0; object-fit: cover; object-position: top;
-    border-radius: 10px; border: 1px solid var(--border); background: var(--card); cursor: zoom-in;
+    width: 170px; 
+    height: 106px; 
+    flex-shrink: 0; 
+    object-fit: contain; /* Modifié : permet de voir toute l'image sans la couper */
+    object-position: center; /* Modifié : centre l'image */
+    border-radius: 10px; 
+    border: 1px solid var(--border); 
+    background: #ffffff; /* Modifié : fond blanc pour que le logo ressorte bien */
+    padding: 6px; /* Ajouté : un peu d'espace autour du logo */
+    box-sizing: border-box; /* Ajouté : pour que le padding ne déforme pas la taille */
+    cursor: zoom-in;
 }
 .leaf-body h4 { font-size: 1rem; margin: 6px 0 4px; }
 .leaf-body p { color: var(--muted); font-size: .85rem; line-height: 1.5; margin-bottom: 10px; display: block; -webkit-line-clamp: unset; overflow: visible; }
