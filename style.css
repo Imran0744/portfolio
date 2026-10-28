@@ -1529,3 +1529,36 @@ body { display: block; }
     .leaf-card { flex-direction: column; align-items: flex-start; }
     .leaf-thumb { width: 100%; height: 150px; }
 }
+
+/* ============================================================
+   COMPÉTENCES : groupes par domaine
+   ============================================================ */
+.comp-intro { text-align: center; color: var(--muted); margin: -12px 0 32px; }
+.comp-group { margin-bottom: 36px; }
+.comp-group-title { display: flex; align-items: center; gap: 12px; font-size: 1.15rem; margin-bottom: 16px; }
+.comp-group-title i {
+    width: 38px; height: 38px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-size: .95rem;
+}
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+.comp-card {
+    display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 20px; transition: transform .3s, border-color .3s;
+}
+.comp-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.comp-icon {
+    width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    background: rgba(14, 165, 233, .12); color: var(--accent); font-size: 1.15rem; margin-bottom: 12px;
+}
+.comp-card h4 { font-size: 1rem; margin-bottom: 6px; }
+.comp-card p { color: var(--muted); font-size: .86rem; line-height: 1.55; }
+.comp-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 14px; }
+.comp-tool { padding: 3px 10px; border-radius: 999px; background: var(--card2); color: var(--accent); font-size: .7rem; font-weight: 700; }
+
+/* barre du haut : un onglet de plus, on libère de la place */
+.nav-links { min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+@media (max-width: 1500px) {
+    .nav-links a i { display: none; }
+    .sidebar h2 { display: none; }
+}
