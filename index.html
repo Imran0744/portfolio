@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio BTS SIO | Imran Poumalis</title>
     <meta name="description" content="Portfolio BTS SIO option SISR d'Imran Poumalis : projets, compétences, certifications et veille technologique.">
+    <link rel="canonical" href="https://imran0744.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Portfolio BTS SIO | Imran Poumalis">
+    <meta property="og:description" content="BTS SIO option SISR, alternant technicien infogérance : projets, compétences, certifications et veille.">
+    <meta property="og:url" content="https://imran0744.github.io/portfolio/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -94,7 +100,7 @@
         <div class="stat"><span class="stat-num grad-text" data-count-selector=".tree-leaf, .cert-item">0</span><span class="stat-label">certifications obtenues</span></div>
         <div class="stat"><span class="stat-num grad-text" data-count-selector="#projets .project-card">0</span><span class="stat-label">projets présentés</span></div>
         <div class="stat"><span class="stat-num grad-text" data-count-selector="#competences .comp-card">0</span><span class="stat-label">compétences détaillées</span></div>
-        <div class="stat"><span class="stat-num grad-text" data-count-selector="#patrimoine .patrimoine-card">0</span><span class="stat-label">outils dans mon patrimoine</span></div>
+        <div class="stat"><span class="stat-num grad-text" data-count-selector="#patrimoine .patrimoine-card">0</span><span class="stat-label">outils de gestion de parc</span></div>
     </div>
 
     <div class="home-heading">
@@ -157,7 +163,7 @@
             <a class="tile " href="#patrimoine">
                 <span class="tile-num">07 / patrimoine</span>
                 <h3>Patrimoine</h3>
-                <p>Les outils que j'utilise : Packet Tracer, Nmap, Wireshark, GLPI…</p>
+                <p>Les outils de gestion de parc que j'utilise : GLPI, OCS, Zabbix…</p>
                 <span class="tile-go" aria-hidden="true">&rarr;</span>
             </a>
             <a class="tile " href="#veilles">
@@ -867,42 +873,29 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
     </div>
 </section>
 
-<!-- PATRIMOINE INFORMATIQUE -->
+<!-- PATRIMOINE INFORMATIQUE (OUTILS DE GESTION) -->
 <section id="patrimoine">
-    <h2>Patrimoine informatique</h2>
+    <h2>Gestion du patrimoine</h2>
+    <p class="comp-intro">Les outils que j'utilise pour gérer, superviser et maintenir un parc informatique au quotidien.</p>
     
     <div class="patrimoine-grid">
-        <!-- Carte Packet Tracer -->
+        <!-- Carte GLPI -->
         <div class="patrimoine-card">
             <div class="patrimoine-media">
-            <img src="images/logo packet tracer 2.png" alt="Packet Tracer">
-             </div>
-            <h3>Packet Tracer</h3>
-            <p>Outil de simulation qui nous a permis de créer des infrastructures réseaux. J'ai réalisé de nombreux TP pour maîtriser la configuration des équipements Cisco.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Simulation</span>
-                <span class="patrimoine-tag">Cisco</span>
-                <span class="patrimoine-tag">Réseaux</span>
+                <img src="images/logo GLPI.png" alt="GLPI">
             </div>
-        </div>
-        
-        <!-- Carte Nmap -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-            <img src="images/logo nmap 3.jpg" alt="Nmap">
-             </div>
-            <h3>Nmap</h3>
-            <p>Nmap permet de répondre à des questions essentielles : Quelles machines sont actives sur le réseau ? (découverte d'hôtes) Quels ports sont ouverts sur ces machines ? (scan de ports) Quels services tournent derrière ces ports ? (détection de services).</p>
+            <h3>GLPI</h3>
+            <p>Solution de gestion des services informatiques (ITSM). GLPI permet de gérer les tickets d'incidents, les demandes d'assistance, les contrats, les factures et les inventaires matériels et logiciels.</p>
             <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Réseau</span>
-                <span class="patrimoine-tag">Sécurité</span>
-                <span class="patrimoine-tag">Linux</span>
+                <span class="patrimoine-tag">Ticketing</span>
+                <span class="patrimoine-tag">ITSM</span>
+                <span class="patrimoine-tag">Gestion de parc</span>
             </div>
         </div>
 
         <!-- Carte OCS Inventory -->
         <div class="patrimoine-card">
-                <div class="patrimoine-media">
+            <div class="patrimoine-media">
                 <img src="images/logo ocs.jpg" alt="OCS">
             </div>
             <h3>OCS Inventory</h3>
@@ -914,140 +907,32 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
             </div>
         </div>
 
-        <!-- Carte GLPI -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-            <img src="images/logo GLPI.png" alt="GLPI">
-            </div>
-            <h3>GLPI</h3>
-            <p>Solution de gestion des services informatiques (ITSM) et de gestion des parcs informatiques. GLPI permet de gérer les tickets d'incidents, les demandes d'assistance, les contrats, les factures et les inventaires matériels et logiciels.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Ticketing</span>
-                <span class="patrimoine-tag">ITSM</span>
-                <span class="patrimoine-tag">Gestion de parc</span>
-            </div>
-        </div>
-
         <!-- Carte OCS + GLPI (synergie) -->
         <div class="patrimoine-card">
             <div class="patrimoine-media">
-            <img src="images/logo_ocs_glpi.png" alt="glpi-ocs">
+                <img src="images/logo_ocs_glpi.png" alt="glpi-ocs">
             </div>
             <h3>OCS + GLPI</h3>
-            <p>Synergie entre OCS Inventory et GLPI : OCS collecte les informations du parc informatique (matériel, logiciels) et GLPI les exploite pour la gestion des tickets, des interventions et la traçabilité des équipements. Une solution complète pour l'administration des systèmes d'information.</p>
+            <p>Synergie entre OCS Inventory et GLPI : OCS collecte les informations du parc informatique (matériel, logiciels) et GLPI les exploite pour la gestion des tickets, des interventions et la traçabilité des équipements. Une solution complète pour l'administration des SI.</p>
             <div class="patrimoine-tags">
                 <span class="patrimoine-tag">Synergie</span>
                 <span class="patrimoine-tag">Plugins</span>
                 <span class="patrimoine-tag">Automatisation</span>
             </div>
         </div>
-            <!-- Carte Wireshark -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_wireshark.png" alt="Wireshark">
-            </div>
-            <h3>Wireshark</h3>
-            <p>Analyseur de protocoles qui capture et décode le trafic réseau en temps réel. Il permet d'observer les trames échangées (ARP, DHCP, DNS, TCP, HTTP…), d'appliquer des filtres et de diagnostiquer un problème de communication ou de sécurité.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Analyse</span>
-                <span class="patrimoine-tag">Trames</span>
-                <span class="patrimoine-tag">Sécurité</span>
-            </div>
-        </div>
 
-        <!-- Carte Winbox -->
+        <!-- Carte Zabbix -->
         <div class="patrimoine-card">
             <div class="patrimoine-media">
-                <img src="images/logo_winbox.png" alt="Winbox">
+                <!-- Tu peux ajouter un logo Zabbix ici si tu en as un -->
+                <i class="fas fa-chart-line" style="font-size: 4rem; color: var(--accent);"></i>
             </div>
-            <h3>Winbox</h3>
-            <p>Utilitaire d'administration graphique des routeurs MikroTik (RouterOS). Je l'ai utilisé pour configurer un routeur MikroTik RB2011 lors de mes TP : création de VLAN, règles de pare-feu et filtrage.</p>
+            <h3>Zabbix</h3>
+            <p>Outil de supervision réseau et système. Il permet de surveiller l'état des serveurs, des équipements réseau et des services, et d'envoyer des alertes en cas de panne ou de dysfonctionnement.</p>
             <div class="patrimoine-tags">
-                <span class="patrimoine-tag">MikroTik</span>
-                <span class="patrimoine-tag">Routeur</span>
-                <span class="patrimoine-tag">Pare-feu</span>
-            </div>
-        </div>
-
-        <!-- Carte Advanced IP Scanner -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_ip_scanner.jpg" alt="Advanced IP Scanner">
-            </div>
-            <h3>Advanced IP Scanner</h3>
-            <p>Scanner réseau gratuit pour Windows. Il détecte rapidement les équipements connectés à un réseau local et affiche leur adresse IP, leur adresse MAC, leur nom et leurs dossiers partagés, avec des actions à distance comme le Wake-on-LAN.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Découverte</span>
-                <span class="patrimoine-tag">Inventaire</span>
-                <span class="patrimoine-tag">Réseau</span>
-            </div>
-        </div>
-
-        <!-- Carte PuTTY -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_putty.png" alt="PuTTY">
-            </div>
-            <h3>PuTTY</h3>
-            <p>Client SSH, Telnet et liaison série pour se connecter en ligne de commande à distance. Il permet d'administrer des serveurs Linux, des routeurs et des commutateurs, ou d'y accéder en console.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">SSH</span>
-                <span class="patrimoine-tag">Console</span>
-                <span class="patrimoine-tag">Linux</span>
-            </div>
-        </div>
-
-        <!-- Carte Oracle VirtualBox -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_virtualbox.png" alt="Oracle VirtualBox">
-            </div>
-            <h3>Oracle VirtualBox</h3>
-            <p>Logiciel de virtualisation gratuit d'Oracle. Il permet de créer des machines virtuelles (Linux, Windows), de prendre des instantanés et de configurer différents modes réseau (NAT, accès par pont, réseau interne) pour tester des infrastructures.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Virtualisation</span>
-                <span class="patrimoine-tag">VM</span>
-                <span class="patrimoine-tag">Réseau</span>
-            </div>
-        </div>
-                <!-- Carte VS Code -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_vscode.png" alt="Visual Studio Code">
-            </div>
-            <h3>Visual Studio Code</h3>
-            <p>Éditeur de code gratuit de Microsoft, léger et extensible. C'est mon éditeur de référence pour mes projets, mes cours et certaines tâches professionnelles : coloration syntaxique, terminal intégré, gestion de Git et extensions pour HTML, CSS, JavaScript ou les scripts.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Éditeur</span>
-                <span class="patrimoine-tag">Git</span>
-                <span class="patrimoine-tag">Extensions</span>
-            </div>
-        </div>
-                <!-- Carte VMware ESXi -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_vmware.png" alt="VMware ESXi">
-            </div>
-            <h3>VMware ESXi</h3>
-            <p>Hyperviseur installé directement sur un serveur physique pour héberger plusieurs machines virtuelles. Je l'ai utilisé chez Axians pour héberger les machines de mon projet de serveur PXE, avec un réseau virtuel isolé dédié au déploiement.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">Virtualisation</span>
-                <span class="patrimoine-tag">Hyperviseur</span>
-                <span class="patrimoine-tag">Serveur</span>
-            </div>
-        </div>
-
-        <!-- Carte iVentoy -->
-        <div class="patrimoine-card">
-            <div class="patrimoine-media">
-                <img src="images/logo_iventoy.png" alt="iVentoy">
-            </div>
-            <h3>iVentoy</h3>
-            <p>Outil gratuit de démarrage réseau (PXE) qui permet d'installer des systèmes (Linux, Windows) sur plusieurs machines à partir d'images ISO, sans clé USB ni DVD. Je l'ai mis en place sur une machine Ubuntu dans mon projet chez Axians.</p>
-            <div class="patrimoine-tags">
-                <span class="patrimoine-tag">PXE</span>
-                <span class="patrimoine-tag">Déploiement</span>
-                <span class="patrimoine-tag">Réseau</span>
+                <span class="patrimoine-tag">Supervision</span>
+                <span class="patrimoine-tag">Alertes</span>
+                <span class="patrimoine-tag">Monitoring</span>
             </div>
         </div>
     </div>
