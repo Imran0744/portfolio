@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio BTS SIO | Imran Poumalis</title>
+    <meta name="description" content="Portfolio BTS SIO option SISR d'Imran Poumalis : projets, compétences, certifications et veille technologique.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -58,32 +59,119 @@
 
     <!-- HERO -->
 <section id="accueil">
-    <div class="hero-content">
-        <img class="hero-avatar" src="images/photo-de-profil.jpg" alt="Imran Poumalis">
-        <h1>Imran Poumalis</h1>
-        <p class="hero-role">Étudiant en BTS SIO – option SISR</p>
-        <p class="hero-subtitle">Alternant technicien infogérance chez <strong>Axians</strong>. Passionné par les réseaux, la cybersécurité et l'administration systèmes.</p>
-
-        <div class="hero-tags">
-            <span class="hero-tag"><i class="fas fa-graduation-cap"></i> BTS SIO</span>
-            <span class="hero-tag"><i class="fas fa-server"></i> SISR</span>
-            <span class="hero-tag"><i class="fas fa-network-wired"></i> Réseaux</span>
-            <span class="hero-tag"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
+    <div class="hero-x">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <p class="kicker"><span class="status-dot" aria-hidden="true"></span>BTS SIO · option SISR · alternant technicien infogérance</p>
+                <h1 class="hero-title">
+                    <span class="line">Imran</span>
+                    <span class="line grad-text">Poumalis.</span>
+                </h1>
+                <p class="hero-role"><span class="prompt" aria-hidden="true">&gt;_</span> Je <span class="typed" data-words='["configure des réseaux et des VLAN", "supervise avec Zabbix", "gère un parc avec GLPI et OCS", "déploie des postes par le réseau (PXE)", "analyse le trafic avec Wireshark"]'>configure des réseaux et des VLAN</span></p>
+                <p class="hero-desc">Étudiant au <strong>lycée Dick Ukeiwé</strong> en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), je me spécialise dans les infrastructures, les systèmes et la sécurité des réseaux.</p>
+                <p class="hero-desc">En alternance chez <strong>Axians</strong> comme technicien infogérance, j'associe la théorie et la pratique sur des infrastructures réelles.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#projets">Voir mes projets <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                    <a class="btn btn--ghost" href="#competences">Mes compétences</a>
+                    <a class="btn btn--ghost" href="Documents/CV-POUMALIS Imran.pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="hero-side">
+                <div class="avatar-ring">
+                    <img src="images/photo-de-profil.jpg" alt="Portrait d'Imran Poumalis" width="260" height="260">
+                    <span class="float-chip float-chip--a"><b>&#9679;</b> Alternant chez Axians</span>
+                    <span class="float-chip float-chip--b"><b>#</b> Cisco Networking Academy</span>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="hero-cta">
-            <a href="#projets" class="btn-primary">Voir mes projets <i class="fas fa-arrow-right"></i></a>
-            <a href="Documents/CV-POUMALIS Imran.pdf" target="_blank" class="btn-secondary"><i class="fas fa-download"></i> Mon CV</a>
+    <div class="marquee" aria-label="Outils et technologies">
+        <div class="marquee-track"><span>Zabbix</span><span>GLPI</span><span>OCS Inventory</span><span>Wireshark</span><span>Nmap</span><span>Cisco Packet Tracer</span><span>VMware ESXi</span><span>VirtualBox</span><span>MikroTik</span><span>VLAN</span><span>Linux</span><span>Git</span><span aria-hidden="true">Zabbix</span><span aria-hidden="true">GLPI</span><span aria-hidden="true">OCS Inventory</span><span aria-hidden="true">Wireshark</span><span aria-hidden="true">Nmap</span><span aria-hidden="true">Cisco Packet Tracer</span><span aria-hidden="true">VMware ESXi</span><span aria-hidden="true">VirtualBox</span><span aria-hidden="true">MikroTik</span><span aria-hidden="true">VLAN</span><span aria-hidden="true">Linux</span><span aria-hidden="true">Git</span></div>
+    </div>
+
+    <div class="stats" aria-label="Chiffres clés">
+        <div class="stat"><span class="stat-num grad-text" data-count-selector=".tree-leaf, .cert-item">0</span><span class="stat-label">certifications obtenues</span></div>
+        <div class="stat"><span class="stat-num grad-text" data-count-selector="#projets .project-card">0</span><span class="stat-label">projets présentés</span></div>
+        <div class="stat"><span class="stat-num grad-text" data-count-selector="#competences .comp-card">0</span><span class="stat-label">compétences détaillées</span></div>
+        <div class="stat"><span class="stat-num grad-text" data-count-selector="#patrimoine .patrimoine-card">0</span><span class="stat-label">outils dans mon patrimoine</span></div>
+    </div>
+
+    <div class="home-heading">
+        <h2>Explore en <span class="grad-text">ligne de commande</span></h2>
+        <p>// essaie : help, skills, neofetch, cd projets</p>
+    </div>
+    <div class="term" id="term" aria-label="Terminal interactif">
+        <div class="term-bar"><i></i><i></i><i></i><span>imran@sisr: ~</span></div>
+        <div class="term-body">
+            <div class="term-output" aria-live="polite"></div>
+            <label class="term-input-line">
+                <span><span class="p">imran@sisr</span>:<span class="d">~</span>$</span>
+                <input class="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="Commande du terminal">
+            </label>
+            <p class="term-hint">Clique dans le terminal pour taper une commande. Tab pour compléter, ↑ pour l'historique.</p>
         </div>
+    </div>
 
-        <div class="hero-stats">
-            <div><strong>2</strong><span>ans en BTS SIO</span></div>
-            <div><strong>5</strong><span>certifications</span></div>
-            <div><strong>3</strong><span>projets majeurs</span></div>
-            <div><strong>2</strong><span>expériences Axians</span></div>
-        </div>
-
-        <p class="hero-hint">Découvre mon parcours <i class="fas fa-arrow-down"></i></p>
+    <div class="home-heading">
+        <h2>Le <span class="grad-text">portfolio</span></h2>
+        <p>// 9 rubriques</p>
+    </div>
+    <div class="tiles" aria-label="Rubriques du portfolio">
+            <a class="tile tile--wide" href="#projets">
+                <span class="tile-num">01 / projets</span>
+                <h3>Projets</h3>
+                <p>Portfolio web, TechForm NC, Entreprise Fil Rouge, serveur PXE iVentoy sur ESXi…</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#a-propos">
+                <span class="tile-num">02 / à propos</span>
+                <h3>À propos</h3>
+                <p>Qui je suis, mon CV et mes premières compétences.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#BTS-SIO">
+                <span class="tile-num">03 / formation</span>
+                <h3>BTS SIO</h3>
+                <p>La formation, l'option SISR et les débouchés.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#parcours">
+                <span class="tile-num">04 / parcours</span>
+                <h3>Parcours</h3>
+                <p>Du bac général à mon alternance chez Axians.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#competences">
+                <span class="tile-num">05 / compétences</span>
+                <h3>Compétences</h3>
+                <p>Réseaux, systèmes, support, cybersécurité et web, par domaine.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#certifications">
+                <span class="tile-num">06 / certifications</span>
+                <h3>Certifications</h3>
+                <p>Cisco Networking Academy et PIX, avec les attestations.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#patrimoine">
+                <span class="tile-num">07 / patrimoine</span>
+                <h3>Patrimoine</h3>
+                <p>Les outils que j'utilise : Packet Tracer, Nmap, Wireshark, GLPI…</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile " href="#veilles">
+                <span class="tile-num">08 / veille</span>
+                <h3>Veille</h3>
+                <p>Les cryptomonnaies : présentation complète et actualités.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="tile tile--full" href="#contact">
+                <span class="tile-num">09 / contact</span>
+                <h3>Me contacter</h3>
+                <p>Une question sur mon parcours ou mes projets ? Écrivez-moi.</p>
+                <span class="tile-go" aria-hidden="true">&rarr;</span>
+            </a>
     </div>
 </section>
 
@@ -105,6 +193,13 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                     </a>
                 </div>
             </div>
+                    <dl class="id-card" aria-label="Fiche d'identité">
+                <div><dt>nom</dt><dd>Imran Poumalis</dd></div>
+                <div><dt>formation</dt><dd>BTS SIO · option SISR</dd></div>
+                <div><dt>poste</dt><dd>Alternant technicien infogérance · Axians</dd></div>
+                <div><dt>lieu</dt><dd>Nouvelle-Calédonie</dd></div>
+                <div><dt>statut</dt><dd class="is-on">en alternance</dd></div>
+            </dl>
         </div>
         
         <div class="about-right">
@@ -222,6 +317,7 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 <!-- PARCOURS -->
 <section id="parcours">
     <h2>Mon Parcours</h2>
+    <div class="trace" id="trace" aria-label="Étapes du parcours"></div>
 
     <div class="pt-legend">
         <span class="pt-pill pt-formation"><i class="fas fa-graduation-cap"></i> Formation</span>
@@ -353,13 +449,34 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
     </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <!-- COMPÉTENCES -->
 <section id="competences">
     <h2>Compétences</h2>
     <p class="comp-intro">Les compétences développées en formation, en entreprise et sur mes projets, classées par domaine.</p>
 
-        <div class="comp-group">
+            <h3 class="comp-group-title"><i class="fas fa-list-check"></i> Les 3 blocs du référentiel BTS SIO</h3>
+    <div class="bloc-grid">
+        <div class="bloc-card">
+            <span class="bloc-num">Bloc 1</span>
+            <h3>Support et mise à disposition de services informatiques</h3>
+            <p>Gérer le patrimoine informatique, répondre aux incidents, travailler en mode projet et mettre un service à disposition des utilisateurs.</p>
+            <a class="bloc-link" href="#patrimoine">Voir mon patrimoine <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="bloc-card">
+            <span class="bloc-num">Bloc 2 · option SISR</span>
+            <h3>Administration des systèmes et des réseaux</h3>
+            <p>Concevoir, installer et déployer une infrastructure réseau, puis l'exploiter et la superviser.</p>
+            <a class="bloc-link" href="#projets">Voir mes projets <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="bloc-card">
+            <span class="bloc-num">Bloc 3</span>
+            <h3>Cybersécurité des services informatiques</h3>
+            <p>Protéger les données, sécuriser les équipements et les usages, garantir la disponibilité, l'intégrité et la confidentialité.</p>
+            <a class="bloc-link" href="#certifications">Voir mes certifications <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+
+<div class="comp-group">
             <h3 class="comp-group-title"><i class="fas fa-network-wired"></i> Réseaux</h3>
             <div class="comp-grid">
                 <div class="comp-card">
@@ -540,9 +657,16 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 <!-- PROJETS -->
 <section id="projets">
     <h2>Projets</h2>
-    <div class="projects-grid">
+    <div class="filters" role="group" aria-label="Filtrer les projets" data-filter-group="projects-grid">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">Tous</button>
+        <button type="button" class="filter" data-filter="pro" aria-pressed="false">En entreprise</button>
+        <button type="button" class="filter" data-filter="formation" aria-pressed="false">En formation</button>
+        <button type="button" class="filter" data-filter="perso" aria-pressed="false">Personnel</button>
+    </div>
+    
+    <div class="projects-grid" id="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" data-cat="perso">
             <div class="project-media">
                 <img src="images/logo_portfolio.jpg" alt="Portfolio Web">
             </div>
@@ -589,7 +713,7 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-cat="formation">
             <div class="project-media">
                 <img src="images/logo-techform-nc.png" alt="Entreprise fil rouge">
             </div>
@@ -649,7 +773,7 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-cat="formation">
             <div class="project-media">
                 <img src="images/logo-techform-nc.png" alt="TechForm NC">
             </div>
@@ -704,7 +828,7 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
         </div>
 
 
-        <div class="project-card">
+        <div class="project-card" data-cat="pro">
             <div class="project-media">
                 <img src="images/logo_vmware.png" alt="Serveur PXE iVentoy">
             </div>
@@ -934,6 +1058,11 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
         <h2>Veilles Technologiques</h2>
               <h1>₿ Les cryptomonnaies</h1>
         <!-- VEILLES TECHNOLOGIQUES -->
+    <div class="vstats">
+        <div class="stat"><span class="stat-num grad-text vstat" data-sel="#veilles .article-item">0</span><span class="stat-label">articles retenus</span></div>
+        <div class="stat"><span class="stat-num grad-text vstat" data-sel="#veilles .article-source" data-distinct="1">0</span><span class="stat-label">sources différentes</span></div>
+        <div class="stat"><span class="stat-num grad-text vstat" data-sel="#veilles .slide-card">0</span><span class="stat-label">périodes couvertes</span></div>
+    </div>
     <div class="container">
     <div class="present">
         <a href="Documents/cryptomonnaies.pdf" class="profile-link">
@@ -1030,29 +1159,84 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
             <p>Entre 2024 et 2026, l'IA est passée d'une phase de test à une utilisation réelle et quotidienne dans les entreprises. On ne se contente plus de poser des questions à l'IA : on utilise désormais des agents autonomes capables de réaliser des tâches complexes pour gagner en efficacité. Pour les services informatiques, l'enjeu principal est devenu de fournir la puissance nécessaire tout en protégeant les données et en limitant la consommation d'énergie. En résumé, l'IA est devenue le cœur des systèmes d'information modernes.</p>
         </div>-->
     </div>
+</div></div>
+    <div class="vmethod-wrap">
+        <h3 class="comp-group-title"><i class="fas fa-route"></i> Ma méthode de veille</h3>
+        <div class="vmethod">
+            <div class="vmeth"><h4><i class="fas fa-magnifying-glass"></i> Collecte</h4><p>Des alertes Google reçues par e-mail sur les cryptomonnaies : les nouveaux articles publiés arrivent directement dans ma boîte de réception.</p></div>
+            <div class="vmeth"><h4><i class="fas fa-database"></i> Organisation dans Notion</h4><p>Chaque alerte est enregistrée dans une base Notion : titre, source, date de publication, lien, sujet et niveau d'importance (haute, moyenne ou basse).</p></div>
+            <div class="vmeth"><h4><i class="fas fa-newspaper"></i> Sources</h4><p>Presse économique et généraliste (Capital, Zonebourse, RFI, TradingView) et sites spécialisés dans les cryptomonnaies.</p></div>
+            <div class="vmeth"><h4><i class="fas fa-filter"></i> Tri</h4><p>Le niveau d'importance attribué à chaque article me sert à choisir ceux que je retiens pour ma présentation et pour ce site.</p></div>
+        </div>
+    </div>
 </section>
   <script src="script.js"></script>
     
     <!-- CONTACT -->
     <section class="contact-section" id="contact">
-        <h2>📬 Contact</h2>
-        <div class="row">
-            <div class="col info">
-                <h4>📍 Localisation</h4>
-                <p>75 Avenue du Maréchal Foch, Immeuble JOMALO</p>
-                <h4>📧 Email</h4>
-                <p>pweevo.230607@gmail.com</p>
-                <h4>📞 Téléphone</h4>
-                <p>+687 84.64.12</p>
+        <h2>Contact</h2>
+        <div class="contact-hero">
+            <div class="contact-hero-text">
+                <p class="kicker"><span class="status-dot" aria-hidden="true"></span>Restons en contact</p>
+                <p class="hero-desc">Une question sur mon parcours, une opportunité professionnelle ou un projet à me proposer ? Je suis ouvert aux échanges et aux collaborations.</p>
+                <div class="mail-chip">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:pweevo.230607@gmail.com">pweevo.230607@gmail.com</a>
+                    <button type="button" class="copy-btn" data-copy="pweevo.230607@gmail.com" aria-label="Copier l'adresse e-mail"><i class="fas fa-copy" aria-hidden="true"></i> <span>Copier</span></button>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn" href="#ecrire">Écrire un message <span class="arrow" aria-hidden="true">&darr;</span></a>
+                    <a class="btn btn--ghost" href="Documents/CV-POUMALIS Imran.pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
+                </div>
             </div>
-            <div class="col">
-                <form id="contactForm" action="https://formspree.io/f/xqppkjll" method="POST">
-                    <input type="text" name="name" placeholder="Votre nom" required>
-                    <input type="email" name="email" placeholder="Votre email" required>
-                    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-                    <button type="submit">Envoyer le message</button>
-                </form>
-            </div>
+            <figure class="cping" aria-label="Fiche de contact présentée comme un terminal">
+                <div class="term-bar"><i></i><i></i><i></i><span>imran@sisr: ~/contact</span></div>
+                <div class="cping-body">
+                    <p class="cping-line" style="--i:0"><span class="p">imran@sisr</span>:<span class="d">~/contact</span>$ ping imran</p>
+                    <p class="cping-line dim" style="--i:1">PING imran.poumalis (Nouvelle-Calédonie)</p>
+                    <p class="cping-line" style="--i:2">64 octets de imran : <span class="k">formation</span>=BTS SIO SISR</p>
+                    <p class="cping-line" style="--i:3">64 octets de imran : <span class="k">poste</span>=Alternant infogérance · Axians</p>
+                    <p class="cping-line" style="--i:4">64 octets de imran : <span class="k">statut</span>=<span class="ok">joignable</span></p>
+                    <p class="cping-line" style="--i:5">64 octets de imran : <span class="k">heure_locale</span>=<span data-clock="Pacific/Noumea">--:--</span> (UTC+11)</p>
+                    <p class="cping-line dim" style="--i:6">--- statistiques ping imran.poumalis ---</p>
+                    <p class="cping-line" style="--i:7">4 paquets transmis, 4 reçus, <span class="ok">0 % de perte</span></p>
+                    <p class="cping-line" style="--i:8"><span class="p">imran@sisr</span>:<span class="d">~/contact</span>$ <span class="caret" aria-hidden="true"></span></p>
+                </div>
+            </figure>
+        </div>
+
+        <h3 class="comp-group-title"><i class="fas fa-location-dot"></i> Où me trouver</h3>
+        <div class="channels">
+            <a class="channel" href="mailto:pweevo.230607@gmail.com"><span class="channel-ico"><i class="fas fa-envelope" aria-hidden="true"></i></span><span class="channel-name">E-mail</span><span class="channel-id">pweevo.230607@gmail.com</span><span class="channel-cta">Écrire <span aria-hidden="true">&rarr;</span></span></a>
+            <a class="channel" href="https://www.linkedin.com/in/imran-poumalis-b74a0a362/" target="_blank" rel="noopener"><span class="channel-ico"><i class="fab fa-linkedin-in" aria-hidden="true"></i></span><span class="channel-name">LinkedIn</span><span class="channel-id">Imran Poumalis</span><span class="channel-cta">Voir le profil <span aria-hidden="true">&#8599;</span></span></a>
+            <a class="channel" href="https://github.com/Imran0744" target="_blank" rel="noopener"><span class="channel-ico"><i class="fab fa-github" aria-hidden="true"></i></span><span class="channel-name">GitHub</span><span class="channel-id">@Imran0744</span><span class="channel-cta">Voir les dépôts <span aria-hidden="true">&#8599;</span></span></a>
+        </div>
+
+        <h3 class="comp-group-title" id="ecrire"><i class="fas fa-pen-to-square"></i> Écrire un message</h3>
+        <div class="contact-grid">
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xqppkjll" method="POST" data-mailto="pweevo.230607@gmail.com">
+                <div class="form-row">
+                    <div class="form-group"><label for="nom">Nom et prénom</label><input type="text" id="nom" name="name" autocomplete="name" required></div>
+                    <div class="form-group"><label for="email">Adresse e-mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+                </div>
+                <div class="form-group"><label for="objet">Objet</label>
+                    <select id="objet" name="objet"><option>Opportunité professionnelle</option><option>Question sur mon parcours</option><option>Projet ou collaboration</option><option>Autre</option></select></div>
+                <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+                <div class="form-foot">
+                    <button type="submit" class="btn">Envoyer le message <span class="arrow" aria-hidden="true">&rarr;</span></button>
+                    <p class="form-note">Si l'envoi direct échoue, votre messagerie s'ouvre avec le message déjà rempli.</p>
+                </div>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+            <aside class="contact-aside" aria-labelledby="infos-titre">
+                <h3 id="infos-titre">Infos pratiques</h3>
+                <dl class="contact-facts">
+                    <div><dt>Localisation</dt><dd>Nouvelle-Calédonie</dd></div>
+                    <div><dt>Heure locale</dt><dd><span data-clock="Pacific/Noumea">--:--</span> à Nouméa (UTC+11)</dd></div>
+                    <div><dt>Formation</dt><dd>BTS SIO option SISR, lycée Dick Ukeiwé</dd></div>
+                    <div><dt>Aujourd'hui</dt><dd>Alternant technicien infogérance chez Axians</dd></div>
+                </dl>
+            </aside>
         </div>
     </section>
 
@@ -1304,21 +1488,6 @@ const sidebar=document.getElementById('sidebar');
 hamburger.addEventListener('click',()=>sidebar.classList.toggle('open'));
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>sidebar.classList.remove('open')));
 
-// ── Contact form toast ──
-const form=document.getElementById('contactForm');
-const toast=document.getElementById('toast');
-form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    const btn=form.querySelector('button');
-    btn.textContent='Envoi en cours…'; btn.disabled=true;
-    try{
-        const res=await fetch(form.action,{ method:'POST', body:new FormData(form), headers:{Accept:'application/json'} });
-        if(res.ok){ form.reset(); showToast('✅ Message envoyé avec succès !'); }
-        else showToast('❌ Erreur, réessayez.');
-    } catch(err){ showToast('❌ Erreur réseau.'); }
-    btn.textContent='Envoyer le message'; btn.disabled=false;
-});
-function showToast(msg){ toast.textContent=msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3500); }
 </script>
 </body>
 </html>
