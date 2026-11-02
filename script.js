@@ -273,7 +273,6 @@ document.addEventListener("DOMContentLoaded", function () {
             print('ouverture de ' + key + '…', 'ok');
             location.hash = '#' + id;
         },
-        // MODIFIÉ ICI
         cv: () => { print('ouverture du CV…', 'ok'); window.open('Documents/CV_POUMALIS_Imran.pdf', '_blank', 'noopener'); },
         theme: () => { const t = document.getElementById('theme-toggle'); if (t) t.click(); print('thème modifié.', 'ok'); },
         clear: () => { out.textContent = ''; }
