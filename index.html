@@ -127,13 +127,13 @@
             <a class="tile tile--wide" href="#projets">
                 <span class="tile-num">01 / projets</span>
                 <h3>Projets</h3>
-                <p>Portfolio web, TechForm NC, Entreprise Fil Rouge, serveur PXE iVentoy sur ESXi…</p>
+                <p>Portfolio web, TechForm NC (fil rouge et audit), serveur PXE iVentoy sur ESXi…</p>
                 <span class="tile-go" aria-hidden="true">&rarr;</span>
             </a>
             <a class="tile " href="#a-propos">
                 <span class="tile-num">02 / à propos</span>
                 <h3>À propos</h3>
-                <p>Qui je suis, mon CV et mes premières compétences.</p>
+                <p>Qui je suis, mes formations, mes expériences et mon CV.</p>
                 <span class="tile-go" aria-hidden="true">&rarr;</span>
             </a>
             <a class="tile " href="#BTS-SIO">
@@ -184,22 +184,13 @@
 <!-- À PROPOS -->
 <section id="a-propos">
     <h2>À Propos</h2>
-    
-    <div class="about-container">
-        <div class="about-left">
-            <div class="presentation">
-                <img src="images/photo-de-profil.jpg" alt="Photo de profil Imran">
-                <div>
-                    <p><em>Salut, moi c'est <span class="highlight">Imran Poumalis</span> </em></p>
-                    <p>Je suis actuellement étudiant au <span class="highlight">lycée Dick Ukeiwé</span> en deuxième année de <span class="highlight">BTS SIO</span> (option <span class="highlight">SISR</span>).</p>
-                    <p>Je me spécialise dans les solutions d'infrastructure, systèmes et réseaux. Mon parcours me permet d'acquérir des compétences en système & réseaux et en sécurité informatique.
-Actuellement en alternance, j'allie théorie et pratique pour développer encore plus mon experience. </p>
-                    <a href="Documents/CV-POUMALIS Imran.pdf" target="_blank" class="cv-button">
-                        <i class="fas fa-download"></i> Télécharger mon CV
-                    </a>
-                </div>
+
+    <div class="about-hero">
+        <div class="about-id">
+            <div class="avatar-ring avatar-ring--sm">
+                <img src="images/photo-de-profil.jpg" alt="Portrait d'Imran Poumalis" width="200" height="200">
             </div>
-                    <dl class="id-card" aria-label="Fiche d'identité">
+            <dl class="id-card" aria-label="Fiche d'identité">
                 <div><dt>nom</dt><dd>Imran Poumalis</dd></div>
                 <div><dt>formation</dt><dd>BTS SIO · option SISR</dd></div>
                 <div><dt>poste</dt><dd>Alternant technicien infogérance · Axians</dd></div>
@@ -207,61 +198,106 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                 <div><dt>statut</dt><dd class="is-on">en alternance</dd></div>
             </dl>
         </div>
-        
-        <div class="about-right">
-            <h3>Mes Compétences</h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-ticket-alt"></i>
-                    <span>Ticketing</span>
-                    <a href="#" class="skill-link" data-skill="Ticketing">En savoir plus... →</a>
+        <div class="about-intro">
+            <p class="kicker"><span class="status-dot" aria-hidden="true"></span>À propos de moi</p>
+            <h3 class="about-title">Infrastructures, systèmes <span class="grad-text">et réseaux.</span></h3>
+            <p class="about-lead">Salut, moi c'est <span class="highlight">Imran Poumalis</span>. Je suis actuellement étudiant au <span class="highlight">lycée Dick Ukeiwé</span> en deuxième année de <span class="highlight">BTS SIO</span> (option <span class="highlight">SISR</span>).</p>
+            <p class="hero-desc">Je me spécialise dans les solutions d'infrastructure, systèmes et réseaux. Mon parcours me permet d'acquérir des compétences en système et réseaux et en sécurité informatique. Actuellement en alternance, j'allie théorie et pratique pour développer encore plus mon expérience.</p>
+            <div class="hero-actions">
+                <a class="btn" href="Documents/CV-POUMALIS Imran.pdf" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i> Télécharger mon CV</a>
+                <a class="btn btn--ghost" href="#competences">Voir mes compétences</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ab-block">
+        <h3 class="comp-group-title"><i class="fas fa-graduation-cap"></i> Formations</h3>
+        <ol class="edu">
+            <li class="edu-item">
+                <span class="edu-year">2022 – 2024</span>
+                <div class="edu-card">
+                    <img src="images/logo Blaise1.jpg" alt="Logo Lycée Blaise-Pascal">
+                    <h4>Bac Général option NSI et physique-chimie</h4>
+                    <p class="edu-org">Lycée Blaise-Pascal</p>
+                    <p>Baccalauréat général.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-desktop"></i>
-                    <span>Virtualisation</span>
-                    <a href="#" class="skill-link" data-skill="Virtualisation">En savoir plus... →</a>
+            </li>
+            <li class="edu-item edu-item--now">
+                <span class="edu-year">2025 – 2026</span>
+                <div class="edu-card">
+                    <img src="images/logo Ukeiwe2.jpg" alt="Logo lycée Dick Ukeiwé">
+                    <h4>BTS SIO option SISR</h4>
+                    <p class="edu-org">Lycée Dick Ukeiwé</p>
+                    <p>Solutions d'Infrastructure, Systèmes et Réseaux, en alternance.</p>
+                    <span class="ab-badge ab-badge--live">En cours</span>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-network-wired"></i>
-                    <span>TCP/IP & Réseaux</span>
-                    <a href="#" class="skill-link" data-skill="TCP/IP & Réseaux">En savoir plus... →</a>
+            </li>
+        </ol>
+    </div>
+
+    <div class="ab-block">
+        <h3 class="comp-group-title"><i class="fas fa-briefcase"></i> Expériences</h3>
+        <div class="filters" role="group" aria-label="Filtrer les expériences" data-filter-group="exp-list">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true">Tout</button>
+            <button type="button" class="filter" data-filter="pro" aria-pressed="false">Professionnel</button>
+            <button type="button" class="filter" data-filter="compet" aria-pressed="false">Compétitions</button>
+        </div>
+        <ol class="ab-tl" id="exp-list">
+            <li class="ab-item" data-cat="compet">
+                <div class="ab-node"><img src="images/hackagou_edition2026.jpg" alt="Hackagou 2026"></div>
+                <div class="ab-card">
+                    <div class="ab-top"><span class="ab-date">2026</span><span class="ab-badge">Compétition</span></div>
+                    <h4>Hackagou : Cap sur les profondeurs numériques !</h4>
+                    <p class="ab-place">Édition 2026</p>
+                    <p>Défis de cybersécurité, conférences et rencontres avec les professionnels du secteur et avec les différentes formations.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-microchip"></i>
-                    <span>Cisco Packet Tracer</span>
-                    <a href="#" class="skill-link" data-skill="Cisco Packet Tracer">En savoir plus... →</a>
+            </li>
+            <li class="ab-item" data-cat="pro">
+                <div class="ab-node"><img src="images/logo axains-RS.png" alt="Logo Axians"></div>
+                <div class="ab-card">
+                    <div class="ab-top"><span class="ab-date">2025 – 2026</span><span class="ab-badge ab-badge--live">En cours</span></div>
+                    <h4>Alternant technicien infogérance</h4>
+                    <p class="ab-place">Axians</p>
+                    <p>Infogérance et gestion du parc informatique, administration et supervision des systèmes, gestion des incidents et support technique, déploiement et sécurisation des infrastructures.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-linux"></i>
-                    <span>Linux (Ubuntu/Debian)</span>
-                    <a href="#" class="skill-link" data-skill="Linux">En savoir plus... →</a>
+            </li>
+            <li class="ab-item" data-cat="pro">
+                <div class="ab-node"><img src="images/logo axains-RS.png" alt="Logo Axians"></div>
+                <div class="ab-card">
+                    <div class="ab-top"><span class="ab-date">27 octobre – 28 novembre 2025</span><span class="ab-badge">Stage</span></div>
+                    <h4>Stage dans la section infogérance</h4>
+                    <p class="ab-place">Axians</p>
+                    <p>Découverte du monde professionnel : maintien du SI des écoles, supervision avec Zabbix et déploiement de téléphones IP avec 3CX.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <span>VScode</span>
-                    <a href="#" class="skill-link" data-skill="VScode">En savoir plus... →</a>
+            </li>
+            <li class="ab-item" data-cat="compet">
+                <div class="ab-node"><img src="images/hackagou_edition2025.jpg" alt="Hackagou 2025"></div>
+                <div class="ab-card">
+                    <div class="ab-top"><span class="ab-date">2025</span><span class="ab-badge">Compétition</span></div>
+                    <h4>Hackagou : Apocalypse, une IA devenue folle menace l'humanité !</h4>
+                    <p class="ab-place">Édition 2025</p>
+                    <p>Défis de cybersécurité, conférences et rencontres avec les professionnels du secteur et avec les différentes formations.</p>
                 </div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="ab-block ab-cv">
+        <div class="cv-wrap">
+            <iframe class="cv-frame" src="Documents/CV-POUMALIS Imran.pdf#toolbar=0&navpanes=0&view=FitH" title="Aperçu du CV d'Imran Poumalis" loading="lazy"></iframe>
+        </div>
+        <div class="cv-text">
+            <h3 class="comp-group-title"><i class="fas fa-file-lines"></i> Mon CV</h3>
+            <p>Vous pouvez consulter mon CV en ligne ou le télécharger au format PDF.</p>
+            <div class="hero-actions">
+                <a class="btn" href="Documents/CV-POUMALIS Imran.pdf" download>Télécharger le CV (PDF) <span class="arrow" aria-hidden="true">&darr;</span></a>
+                <a class="btn btn--ghost" href="Documents/CV-POUMALIS Imran.pdf" target="_blank" rel="noopener">Ouvrir dans un onglet</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- MODALE POUR LES COMPÉTENCES -->
-<div id="skill-modal" class="modal">
-    <div class="modal-content">
-        <button class="modal-nav prev-skill" id="prev-skill">❮</button>
-        <span class="modal-close">&times;</span>
-        <h3 id="modal-title">Ticketing</h3>
-        <p id="modal-description"></p>
-        <button class="modal-nav next-skill" id="next-skill">❯</button>
-        <div class="modal-progress">
-            <span id="current-skill-index">1</span> / <span id="total-skills">6</span>
-        </div>
-    </div>
-</div>
-
-
-    <!-- BTS SIO -->
+<!-- BTS SIO -->
     <section id="BTS-SIO">
         <h2>BTS SIO</h2>
         <div class="intro-and-careers">
@@ -721,19 +757,24 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
 
         <div class="project-card" data-cat="formation">
             <div class="project-media">
-                <img src="images/logo-techform-nc.png" alt="Entreprise fil rouge">
+                <img src="images/logo-techform-nc.png" alt="TechForm NC">
             </div>
             <div class="project-body">
-                <h3>Entreprise TechForm NC</h3>
-                <h4>Projet annuel SISR · Fil rouge</h4>
-                <p>Projet de l'année du BTS SIO SISR (session 2026, Nouvelle-Calédonie) : une même entreprise, TechForm NC, sert de fil conducteur. Les 18 étudiants SISR, répartis en 6 équipes de 3, construisent et sécurisent ensemble son système d'information, la cybersécurité étant le principe directeur de chaque décision. Je fais partie de l'équipe 1, Audit &amp; Inventaire.</p>
-                <div class="project-tags">
+                <h3>TechForm NC</h3>
+                <h4>Projet annuel SISR · 2 phases</h4>
+
+                <div class="project-phases">
+                    <section class="project-phase" aria-label="Phase 1 : Entreprise Fil Rouge">
+                        <span class="phase-badge">Phase 1</span>
+                        <h4 class="phase-title">Entreprise Fil Rouge</h4>
+                        <p>Projet de l'année du BTS SIO SISR (session 2026, Nouvelle-Calédonie) : une même entreprise, TechForm NC, sert de fil conducteur. Les 18 étudiants SISR, répartis en 6 équipes de 3, construisent et sécurisent ensemble son système d'information, la cybersécurité étant le principe directeur de chaque décision. Je fais partie de l'équipe 1, Audit &amp; Inventaire.</p>
+                        <div class="project-tags">
                     <span class="project-tag">Cybersécurité</span>
                     <span class="project-tag">VLAN</span>
                     <span class="project-tag">SIEM / IDS</span>
                     <span class="project-tag">RGPD</span>
                 </div>
-                <details class="project-details">
+                        <details class="project-details">
                     <summary>Voir le détail du projet</summary>
                     <div class="pd-grid">
                         <div class="pd-block">
@@ -776,17 +817,12 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                         </div>
                     </div>
                 </details>
-            </div>
-        </div>
+                    </section>
 
-        <div class="project-card" data-cat="formation">
-            <div class="project-media">
-                <img src="images/logo-techform-nc.png" alt="TechForm NC">
-            </div>
-            <div class="project-body">
-                <h3>TechForm NC</h3>
-                <h4>Équipe Audit &amp; Inventaire</h4>
-                <p>Nos missions :</p>
+                    <section class="project-phase" aria-label="Phase 2 : équipe Audit et Inventaire">
+                        <span class="phase-badge">Phase 2</span>
+                        <h4 class="phase-title">Équipe Audit &amp; Inventaire</h4>
+                        <p>Nos missions :</p>
                 <ul class="project-list">
                     <li>réaliser un inventaire exhaustif des actifs</li>
                     <li>identifier les actifs critiques</li>
@@ -794,12 +830,12 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                     <li>qualifier les risques techniques et organisationnels</li>
                     <li>produire une cartographie détaillée du système d'information</li>
                 </ul>
-                <div class="project-tags">
+                        <div class="project-tags">
                     <span class="project-tag">Réseau</span>
                     <span class="project-tag">Sécurité</span>
                     <span class="project-tag">Linux</span>
                 </div>
-                <details class="project-details">
+                        <details class="project-details">
                     <summary>Voir le détail du projet</summary>
                     <div class="pd-grid">
                         <div class="pd-block">
@@ -830,6 +866,8 @@ Actuellement en alternance, j'allie théorie et pratique pour développer encore
                         </div>
                     </div>
                 </details>
+                    </section>
+                </div>
             </div>
         </div>
 
