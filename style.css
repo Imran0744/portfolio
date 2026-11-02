@@ -1829,3 +1829,11 @@ body { display: block; }
     .edu-item::before { display: none; }
     .cv-frame { height: 380px; }
 }
+
+/* Projet en deux phases (TechForm NC) */
+.project-phases { display: flex; flex-direction: column; gap: 18px; margin-top: 14px; }
+.project-phase { position: relative; padding: 18px 20px; border-radius: 16px; background: var(--card2); border: 1px solid var(--border); }
+.project-phase + .project-phase::before { content: ''; position: absolute; left: 34px; top: -19px; height: 18px; border-left: 2px dashed var(--accent); }
+.phase-badge { display: inline-block; padding: 3px 12px; margin-bottom: 8px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font: 700 .7rem ui-monospace, Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; }
+.project-body .phase-title { color: var(--text); font-size: 1.05rem; margin-bottom: 8px; }
+.project-phase .project-details { margin-top: 14px; }
