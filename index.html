@@ -73,7 +73,9 @@
                     <span class="line">Imran</span>
                     <span class="line grad-text">Poumalis.</span>
                 </h1>
-                <p class="hero-role"><span class="prompt" aria-hidden="true">&gt;_</span> Je <span class="typed" data-words='["configure des réseaux et des VLAN", "supervise avec Zabbix", "gère un parc avec GLPI et OCS", "déploie des postes par le réseau (PXE)", "analyse le trafic avec Wireshark"]'>configure des réseaux et des VLAN</span></p>
+                <!-- CORRECTION ICI : L'animation est plus fluide -->
+                <p class="hero-role"><span class="prompt" aria-hidden="true">&gt;_</span> Je <span class="typed" data-words='["configure des réseaux et des VLAN", "supervise avec Zabbix", "gère un parc avec GLPI et OCS", "déploie des postes par le réseau (PXE)", "analyse le trafic avec Wireshark"]'>configure des réseaux</span></p>
+                
                 <p class="hero-desc">Étudiant au <strong>lycée Dick Ukeiwé</strong> en deuxième année de <strong>BTS SIO</strong> (Services Informatiques aux Organisations), option <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux), je me spécialise dans les infrastructures, les systèmes et la sécurité des réseaux.</p>
                 <p class="hero-desc">En alternance chez <strong>Axians</strong> comme technicien infogérance, j'associe la théorie et la pratique sur des infrastructures réelles.</p>
                 <div class="hero-actions">
@@ -755,27 +757,25 @@
             </div>
         </div>
 
+        <!-- CARTE TECHFORM NC RÉDUITE -->
         <div class="project-card" data-cat="formation">
             <div class="project-media">
                 <img src="images/logo-techform-nc.png" alt="TechForm NC">
             </div>
             <div class="project-body">
                 <h3>TechForm NC</h3>
-                <h4>Projet annuel SISR · 2 phases</h4>
-
-                <div class="project-phases">
-                    <section class="project-phase" aria-label="Phase 1 : Entreprise Fil Rouge">
-                        <span class="phase-badge">Phase 1</span>
-                        <h4 class="phase-title">Entreprise Fil Rouge</h4>
-                        <p>Projet de l'année du BTS SIO SISR (session 2026, Nouvelle-Calédonie) : une même entreprise, TechForm NC, sert de fil conducteur. Les 18 étudiants SISR, répartis en 6 équipes de 3, construisent et sécurisent ensemble son système d'information, la cybersécurité étant le principe directeur de chaque décision. Je fais partie de l'équipe 1, Audit &amp; Inventaire.</p>
-                        <div class="project-tags">
+                <h4>Projet annuel SISR · Fil rouge & Audit</h4>
+                <p>Projet de l'année du BTS SIO SISR : une même entreprise, TechForm NC, sert de fil conducteur. Les 18 étudiants SISR, répartis en 6 équipes de 3, construisent et sécurisent ensemble son système d'information. Je fais partie de l'équipe 1, Audit &amp; Inventaire.</p>
+                
+                <div class="project-tags">
                     <span class="project-tag">Cybersécurité</span>
                     <span class="project-tag">VLAN</span>
                     <span class="project-tag">SIEM / IDS</span>
                     <span class="project-tag">RGPD</span>
                 </div>
-                        <details class="project-details">
-                    <summary>Voir le détail du projet</summary>
+
+                <details class="project-details">
+                    <summary>Voir les points clés (équipes, missions, objectifs)</summary>
                     <div class="pd-grid">
                         <div class="pd-block">
                             <h5>Les 6 équipes et leurs missions</h5>
@@ -789,7 +789,7 @@
                             </ul>
                         </div>
                         <div class="pd-block">
-                            <h5>Livrables attendus</h5>
+                            <h5>Livrables attendus (Objectifs)</h5>
                             <ul>
                                 <li>Mission 1 : rapport d'audit et cartographie du SI</li>
                                 <li>Mission 2 : dossier d'architecture argumenté</li>
@@ -800,52 +800,9 @@
                             </ul>
                         </div>
                         <div class="pd-block">
-                            <h5>Circulation des journaux</h5>
-                            <p>Les pare-feu, l'IDS et les agents des postes envoient leurs journaux au SIEM central (syslog, agents). Le SIEM alimente ensuite une archive froide longue durée, avec contrôle d'intégrité (sha256). L'équipe 6 la consulte en lecture seule pour mener l'investigation.</p>
-                        </div>
-                        <div class="pd-block">
-                            <h5>Coordination entre équipes</h5>
+                            <h5>Mon équipe : Audit &amp; Inventaire</h5>
                             <ul>
-                                <li>Équipe 2 vers équipe 3 : flux autorisés entre VLAN</li>
-                                <li>Équipes 3 et 4 vers équipe 5 : envoi des journaux du pare-feu et de l'IDS au SIEM</li>
-                                <li>Équipes 5 et 6 : archivage et politique de conservation des journaux (RGPD)</li>
-                            </ul>
-                        </div>
-                        <div class="pd-block">
-                            <h5>Évaluation et objectif</h5>
-                            <p>Cohérence technique de l'architecture, justification des choix de cybersécurité, lien avec la réglementation (RGPD), qualité des livrables et posture professionnelle. Chaque choix doit pouvoir être défendu devant le jury de l'épreuve E5, dans l'esprit d'un administrateur responsable.</p>
-                        </div>
-                    </div>
-                </details>
-                    </section>
-
-                    <section class="project-phase" aria-label="Phase 2 : équipe Audit et Inventaire">
-                        <span class="phase-badge">Phase 2</span>
-                        <h4 class="phase-title">Équipe Audit &amp; Inventaire</h4>
-                        <p>Nos missions :</p>
-                <ul class="project-list">
-                    <li>réaliser un inventaire exhaustif des actifs</li>
-                    <li>identifier les actifs critiques</li>
-                    <li>analyser les vulnérabilités potentielles</li>
-                    <li>qualifier les risques techniques et organisationnels</li>
-                    <li>produire une cartographie détaillée du système d'information</li>
-                </ul>
-                        <div class="project-tags">
-                    <span class="project-tag">Réseau</span>
-                    <span class="project-tag">Sécurité</span>
-                    <span class="project-tag">Linux</span>
-                </div>
-                        <details class="project-details">
-                    <summary>Voir le détail du projet</summary>
-                    <div class="pd-grid">
-                        <div class="pd-block">
-                            <h5>Contexte</h5>
-                            <p>Mise en situation professionnelle autour de TechForm NC (épreuve E6 du BTS SIO, option SISR), au sein de l'équipe Audit &amp; Inventaire.</p>
-                        </div>
-                        <div class="pd-block">
-                            <h5>Démarche</h5>
-                            <ul>
-                                <li>Inventorier l'ensemble des actifs du système d'information</li>
+                                <li>Inventorier l'ensemble des actifs du SI</li>
                                 <li>Identifier les actifs critiques</li>
                                 <li>Analyser les vulnérabilités potentielles</li>
                                 <li>Qualifier les risques techniques et organisationnels</li>
@@ -853,21 +810,16 @@
                             </ul>
                         </div>
                         <div class="pd-block">
-                            <h5>Travaux complémentaires</h5>
-                            <p>Dans le même scénario, TP de segmentation et de filtrage réseau : VLAN par section (Admin, SISR, SLAM, Labo) et listes de contrôle d'accès (ACL) sur du matériel Cisco, MikroTik et TP-Link.</p>
-                        </div>
-                        <div class="pd-block">
-                            <h5>Livrables et compétences</h5>
+                            <h5>Coordination &amp; Évaluation</h5>
                             <ul>
-                                <li>Plan de situation, justification des choix et relevé des tests, avec captures de preuves</li>
-                                <li>Inventaire et cartographie d'un SI</li>
-                                <li>Analyse de risques, VLAN, ACL, documentation technique</li>
+                                <li>Équipe 2 vers équipe 3 : flux autorisés entre VLAN</li>
+                                <li>Équipes 3 et 4 vers équipe 5 : envoi des journaux du pare-feu et de l'IDS au SIEM</li>
+                                <li>Équipes 5 et 6 : archivage et politique de conservation des journaux (RGPD)</li>
+                                <li>Évaluation : Cohérence technique, justification des choix, qualité des livrables et posture pro.</li>
                             </ul>
                         </div>
                     </div>
                 </details>
-                    </section>
-                </div>
             </div>
         </div>
 
