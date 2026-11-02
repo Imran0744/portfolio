@@ -1775,3 +1775,57 @@ body { display: block; }
 }
 @media (max-width: 560px) { .contact-form .form-row { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .cping-line { opacity: 1; animation: none; } .caret { animation: none; } }
+
+/* ============================================================
+   À PROPOS : profil, formations, expériences, CV
+   ============================================================ */
+.about-hero { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; margin-bottom: 44px; }
+.avatar-ring--sm { width: 200px; height: 200px; margin: 0 auto 18px; }
+.about-id .id-card { margin-top: 0; }
+.about-title { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; margin: 10px 0 14px; }
+.about-lead { font-size: 1.05rem; line-height: 1.7; margin-bottom: 12px; }
+.ab-block { margin-bottom: 44px; }
+
+.edu { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; position: relative; padding-top: 34px; }
+.edu::before { content: ''; position: absolute; left: 0; right: 0; top: 9px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+.edu-item { position: relative; }
+.edu-item::before { content: ''; position: absolute; left: 0; top: -34px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+.edu-item--now::before { background: var(--accent); box-shadow: 0 0 0 5px rgba(14, 165, 233, .2); }
+.edu-year { display: block; margin-bottom: 8px; font: 700 .78rem ui-monospace, Consolas, monospace; color: var(--accent); }
+.edu-card { height: 100%; padding: 20px; border-radius: 18px; background: var(--card); border: 1px solid var(--border); transition: transform .3s, border-color .3s; }
+.edu-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.edu-card img { width: 56px; height: 56px; object-fit: contain; padding: 4px; margin-bottom: 12px; border-radius: 12px; background: #fff; border: 1px solid var(--border); }
+.edu-card h4 { font-size: 1.02rem; margin-bottom: 4px; }
+.edu-org { color: var(--accent); font-weight: 700; font-size: .85rem; margin-bottom: 6px; }
+.edu-card p { color: var(--muted); font-size: .86rem; line-height: 1.55; }
+
+.ab-badge { display: inline-block; padding: 3px 12px; border-radius: 999px; background: var(--card2); border: 1px solid var(--border); color: var(--muted); font-size: .72rem; font-weight: 700; }
+.ab-badge--live { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-color: transparent; color: #fff; }
+.edu-card .ab-badge { margin-top: 10px; }
+
+.ab-tl { list-style: none; position: relative; padding-left: 38px; }
+.ab-tl::before { content: ''; position: absolute; left: 19px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: linear-gradient(var(--accent), var(--accent3)); }
+.ab-item { position: relative; margin-bottom: 18px; }
+.ab-node { position: absolute; left: -38px; top: 6px; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background: #fff; border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--accent); display: flex; align-items: center; justify-content: center; }
+.ab-node img { width: 100%; height: 100%; object-fit: cover; }
+.ab-card { padding: 18px 22px; border-radius: 18px; background: var(--card); border: 1px solid var(--border); transition: border-color .3s; }
+.ab-card:hover { border-color: var(--accent); }
+.ab-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.ab-date { font: 700 .78rem ui-monospace, Consolas, monospace; color: var(--accent); }
+.ab-card h4 { font-size: 1.05rem; margin-bottom: 2px; }
+.ab-place { color: var(--muted); font-weight: 700; font-size: .84rem; margin-bottom: 6px; }
+.ab-card p { color: var(--muted); font-size: .88rem; line-height: 1.55; }
+.ab-card .ab-place { margin-bottom: 6px; }
+
+.ab-cv { display: grid; grid-template-columns: 340px 1fr; gap: 36px; align-items: center; }
+.cv-wrap { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--card2); box-shadow: 0 16px 36px rgba(0, 0, 0, .12); }
+.cv-frame { display: block; width: 100%; height: 440px; border: 0; }
+.cv-text p { color: var(--muted); margin-bottom: 8px; }
+
+@media (max-width: 900px) {
+    .about-hero, .ab-cv { grid-template-columns: 1fr; }
+    .edu::before { display: none; }
+    .edu { padding-top: 0; }
+    .edu-item::before { display: none; }
+    .cv-frame { height: 380px; }
+}
